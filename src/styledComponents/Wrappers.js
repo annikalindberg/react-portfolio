@@ -1,19 +1,31 @@
 import styled from 'styled-components';
 
+export const HeroWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+  //tablet and larger
+  @media screen and (min-width: 768px) {
+    width: 100%; // 50% width on tablet screens
+    margin: 0 24px;
+  }
+`
 export const HeadlineWrapper = styled.div`
   display: flex;
-width: 20.5rem; 
+max-width: 95%;/* 20.5rem; */ 
 flex-direction: column;
 align-items: flex-start;
 gap: 1.8125rem; // this is the space between the elements in the flexbox
-margin-left: 24px;
+margin-left: 24px 0;
 
 
     //tablet and larger
     @media screen and (min-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+       display: inline-flex;
+align-items: center;
+gap: 1.8125rem;
         
     }
 `
@@ -23,11 +35,11 @@ display: flex;
   align-items: center;
 margin: 24px; 
 `;
+export const TextWrapper = styled.div`
+max-width: 95%;
 
-export const ContactIconsWrapper = styled.div`
-display: flex;
-width: 20.4375rem;
-justify-content: space-between;
-align-items: flex-end;
-`
-
+// tablet and larger
+@media screen and (min-width: 768px) {
+  max-width: 30rem;
+}
+`;
