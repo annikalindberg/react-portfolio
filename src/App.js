@@ -1,12 +1,18 @@
 import React from 'react'
-import GlobalStyles from './styledComponents/GlobalStyles'
-import Hero from './sections/HeroSection'
+import HeroSection from './components/Hero'
+import styled from 'styled-components';
+import { ThemeProvider } from 'styled-components';
+import theme from './theme';
+import ProjectContent from './components/ProjectsSection';
 
 export const App = () => {
   return (
     <div>
-      <GlobalStyles />
-      <Hero />
+      <ThemeProvider theme={theme}>
+        <HeroSection />
+        <ProjectContent />
+      </ThemeProvider>
+
     </div>
   )
 }

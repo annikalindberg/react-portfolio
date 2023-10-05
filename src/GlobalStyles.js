@@ -1,10 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
-import SatoshiRegular from '../fonts/Satoshi-Regular.woff';
-import SatoshiBold from '../fonts/Satoshi-Bold.woff';
-import SatoshiLight from '../fonts/Satoshi-Light.woff';
-import SatoshiMedium from '../fonts/Satoshi-Medium.woff';
-import BevellierMedium from '../fonts/Bevellier-Medium.woff';
+import SatoshiRegular from './fonts/Satoshi-Regular.woff';
+import SatoshiBold from './fonts/Satoshi-Bold.woff';
+import SatoshiLight from './fonts/Satoshi-Light.woff';
+import SatoshiMedium from './fonts/Satoshi-Medium.woff';
 
 const GlobalStyles = createGlobalStyle`
     @font-face {

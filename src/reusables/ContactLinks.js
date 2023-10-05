@@ -7,13 +7,16 @@ import EmailIcon from '../assets/emailicon.png';
 
 const ContactIconsWrapper = styled.div`
 display: flex;
-max-width: 20.5rem;
-align-self: baseline;
+
+justify-content: flex-start;
+margin-left: 6rem;
 
 //tablet and larger
 @media screen and (min-width: 768px) {
    // align vertically with the headline
-    align-self: baseline;
+  
+
+   
     
 }
 `

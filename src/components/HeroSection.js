@@ -4,9 +4,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import profileSquare from '../assets/profil-square.jpg';
-import { HeadlineWrapper, ProfileImageWrapper, TextWrapper, HeroWrapper } from '../styledComponents/Wrappers';
-import ContactIconBar from '../styledComponents/ContactLinks';
-import LetsScroll from '../styledComponents/ScrollIcon';
+import { HeadlineWrapper, ProfileImageWrapper, TextWrapper, HeroWrapper } from '../reusables/Wrappers';
+import ContactIconBar from '../reusables/ContactLinks';
+import LetsScroll from '../reusables/ScrollIcon';
 import HeroBackgroundImage from '../assets/rainbow.jpg';
 
 // Use uppercase for styled component names
@@ -43,10 +43,16 @@ line-height: 1.7rem;
 `;
 
 const HeroBackground = styled.img`
-display: none;
+ background: #EEEEEE;
+  height: 100%;
+  color: #FFD93D;
+  text-align: left;
+  flex-direction: column;
+  justify-content: left;
+  display: none;
 
 // tablet and larger
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 668px) {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,10 +60,11 @@ display: none;
 background-size: cover;
 width: 100%;
 max-height: 412px;
-
-
-  
 }
+  @media screen and (min-width: 1024px) {
+  justify-content: flex-end;
+  height: 100vh;
+  }
   `
 
 const Hero = () => {
@@ -73,9 +80,9 @@ const Hero = () => {
           <SecondaryHeader>Frontend Developer</SecondaryHeader>
           <TextWrapper>
             <Presentation>As a frontend developer, I bring a broad and user-oriented perspective, as well as a burning passion for code. Before switching careers to tech, I worked within social movement building and non-profit organizations, which helped me
-            develop excellent coordination, teamwork, and communication skills.
-            Now, I'm looking to join a team where I can continue to leverage my skills and grow my expertise in coding, working my way towards contributing to the creation of
-            cutting-edge interfaces, cool  features, and effective code.
+              develop excellent coordination, teamwork, and communication skills.
+              Now, I'm looking to join a team where I can continue to leverage my skills and grow my expertise in coding, working my way towards contributing to the creation of
+              cutting-edge interfaces, cool  features, and effective code.
             </Presentation>
           </TextWrapper>
         </HeadlineWrapper>
