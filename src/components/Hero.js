@@ -13,8 +13,8 @@ import ContactLinks from '../reusables/ContactLinks';
 
 // //////////// SECTION SPECIFIC STYLING ///////////// //
 
-const Section1 = styled.section`
-  background: #EEEEEE;
+const PresentationWrapper = styled.section`
+  background: ${({ theme }) => theme.colors.paleYellow};
   height: 100%;
   color: #FFFFFF;
   text-align: left;
@@ -131,7 +131,7 @@ const ProfileInfoParagraphTextStructure = styled.div`
 
 const HeroSection = () => {
     return (
-        <Section1>
+        <PresentationWrapper>
             <BigScreenStructure>
                 <SectionTabletPicture>
                     <BackgroundImage src={rainbow} alt="background rainbow" />
@@ -157,7 +157,7 @@ const HeroSection = () => {
                     <ContactLinks />
                 </ProfileInfoParagraphTextStructure>
             </BigScreenStructure>
-        </Section1>
+        </PresentationWrapper>
     );
 };
 export default HeroSection;

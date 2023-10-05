@@ -1,15 +1,80 @@
 import React, { useState } from 'react';
 import projects from './ProjectsArray';
 import styled from 'styled-components';
-import { LiveDemoButton, ViewCodeButton } from '../reusables/Buttons';
+import { PrimaryButton } from '../reusables/Buttons';
 import { ProjectImage } from 'reusables/imagesStyles';
 import { SectionTitle, ProjectTitle, ParagraphText } from 'reusables/FontStyles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import Select from 'react-select';
+import theme from 'theme';
 
 const ProjectContent = () => {
     const [selectedStack, setSelectedStack] = useState('all');
+    const options = [
+        { value: 'all', label: 'All projects' },
+        { value: 'HTML', label: 'HTML' },
+        { value: 'CSS', label: 'CSS' },
+        { value: 'JavaScript', label: 'JavaScript' },
+        { value: 'React', label: 'React' },
+        { value: 'JSX', label: 'JSX' },
+        { value: 'Redux', label: 'Redux' },
+        { value: 'Pair-programming', label: 'Pair-programming' },
+    ];
 
-    const handleChange = (event) => {
-        setSelectedStack(event.target.value);
+    const customStyles = {
+        placeholder: (base) => ({
+            ...base,
+            color: "black",
+
+        }),
+        option: (provided, state) => ({
+            ...provided,
+            borderBottom: '1px dotted pink',
+            color: state.isSelected ? 'black' : 'black',
+            padding: 20,
+            background: state.isFocused ? theme.colors.vibrantPinkPastel : theme.colors.lightPinkPastel,
+            "&:hover": {
+                // Overwrittes the different states of border
+                borderColor: state.isFocused ? "" : "vibrantPink"
+            }
+        }),
+        control: (base, state) => ({
+            ...base,
+            width: 300,
+            background: theme.colors.lightPinkPastel,
+            borderRadius: state.isFocused ? "3px 3px 0 0" : 3,
+
+            boxShadow: state.isFocused ? null : null,
+            "&:hover": {
+
+                // Overwrittes the different states of border
+                borderColor: state.isFocused ? "vibrantPink" : "vibrantPink"
+            }
+        }),
+        menu: base => ({
+            ...base,
+            // override border radius to match the box
+            borderRadius: 0,
+            // kill the gap
+            marginTop: 0
+        }),
+        menuList: base => ({
+            ...base,
+
+
+            // kill the white space on first and last option
+            padding: 0
+
+        })
+
+    };
+
+
+
+
+    const handleChange = (selectOption) => {
+        setSelectedStack(selectOption.value);
     };
 
     const filteredProjects = projects.filter((project) =>
@@ -18,10 +83,10 @@ const ProjectContent = () => {
 
 
     const ProjectWrapper = styled.li`
-
+background-color: ${({ theme }) => theme.colors.vibrantPinkPastel};
     @media screen and (min-width: 668px) {
-    
   display: flex;
+  box-shadow: 0dvw 0.2dvh 0.5rem rgba(0, 0, 0, 0.5); // top, right, bottom, left dvw = 1% of viewport width to set the shadow only bottom and right, dvh = 1% of viewport height to set the shadow only bottom and right
     }
     @media screen and (min-width: 1024px) {
         margin-right: 15%;
@@ -37,6 +102,7 @@ const ProjectContent = () => {
     flex-direction: column;
     margin: 2rem 1rem 1rem 1rem;
     max-width: 30%;
+    
     }`
 
 
@@ -53,17 +119,18 @@ const ProjectContent = () => {
     display: flex;
     flex-direction: column;
     margin: 2rem 1rem 1rem 1rem;
+    
    
     `
 
 
     const TechTag = styled.li`
-  background-color: black;
-  color: white;
+  background-color: ${({ theme }) => theme.colors.lightGreen};
+  color: black;
   padding: 5px;
   margin: 2px;
-  border-radius: 3px; // optional, for rounded corners
-  display: inline-block; // for horizontal layout
+  border-radius: 3px; 
+  display: inline-block; // for horizontal layout 
 
   
 `;
@@ -72,25 +139,64 @@ const ProjectContent = () => {
     flex-direction: column;
     justify-content: flex-start;
 
+
     @media screen and (min-width: 668px) {
     flex-direction: row;
         
     }
     `
+    // selectdropdownmenu style
+
+    const DropdownWrapper = styled.div`
+     margin: 2rem 3rem 2rem;
+     border-radius: 8px;
+     padding: 5px;
+     display: flex;
+        justify-content: flex-end;
+        @media screen and (min-width: 668px) {
+            justify-content: center;
+            
+        }
+   `;
+
+    /*  const StyledSelect = styled.select`
+   width: 100%;
+   height: 40px;
+  background-color: ${({ theme }) => theme.colors.vibrantPinkPastel};
+   color: #000;
+   
+   font-size: 0.9rem;
+   border: none;
+   border-radius: 8px;
+   padding: 10px;
+   appearance: none; /* Remove default appearance */
+
+    /* &:focus {
+      outline: none;
+      border-color: #007bff; /* Change border color on focus */
+    /*   }
+    `;
+    
+        const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+      margin-right: 50px; 
+      margin-top: 6px;
+    `;   */
+
+
 
     return (
         <div>
             <SectionTitle>Featured Projects</SectionTitle>
-            <select value={selectedStack} onChange={handleChange}>
-                <option value="all">All projects</option>
-                <option value="HTML">HTML</option>
-                <option value="CSS">CSS</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="React">React</option>
-                <option value="JSX">JSX</option>
-                <option value="Redux">Redux</option>
-                <option value="Pair-programming">Pair-programming</option>
-            </select>
+            <DropdownWrapper>
+                <Select
+                    styles={customStyles}
+                    options={options}
+                    onChange={handleChange}
+                    placeholder="Select a stack"
+                />
+            </DropdownWrapper>
+            {/* <StyledFontAwesomeIcon icon={faArrowDown} /> */}
+
             <ul>
                 {filteredProjects.map((project, index) => (
                     <ProjectWrapper key={index}>
@@ -109,8 +215,10 @@ const ProjectContent = () => {
                                 ))}
                             </ul>
                             <ButtonWrapper>
-                                <ViewCodeButton onClick={() => window.open(project.githubLink)}>View the code</ViewCodeButton>
-                                <LiveDemoButton onClick={() => window.open(project.liveDemoLink)}>Live demo</LiveDemoButton>
+                                <PrimaryButton
+                                    variant="alternative"
+                                    onClick={() => window.open(project.githubLink)}>View the code</PrimaryButton>
+                                <PrimaryButton onClick={() => window.open(project.LiveDemoLink)}>Live demo</PrimaryButton>
                             </ButtonWrapper>
                         </InnerWrapper>
                     </ProjectWrapper>

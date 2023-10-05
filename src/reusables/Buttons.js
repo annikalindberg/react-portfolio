@@ -1,16 +1,14 @@
-// /////////////// IMPORTS //////////////////////// //
 
 import styled from 'styled-components';
 
-// ////////////// BUTTON STYLING /////////////// //
 
-export const ViewCodeButton = styled.button`
+export const PrimaryButton = styled.button`
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 12px 12px 12px 12px;
-    background: #F5F5F5;
-    border-radius: 40px;
+    background: ${({ theme, variant }) => variant === 'alternative' ? theme.colors.lightGreenPastel : theme.colors.lightBlue};
+    border-radius: 20px;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -19,34 +17,17 @@ export const ViewCodeButton = styled.button`
     font-family: Futura;
     text-decoration: none;
     max-width: 200px;
+    margin: 1.25rem 1.25rem 1.875rem 0;
+    border-top: 1px solid black;
 
     &:hover {
-    background: #EB5577;
-    color: #FFFFFF;
+    background: ${({ theme }) => theme.colors.lightBluePastel};
+    color: black;
+    border-bottom: 1px solid black;
     }
     `;
 
-export const LiveDemoButton = styled.button`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 12px 12px 12px 12px;
-    background: #F5F5F5;
-    border-radius: 40px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 27px;
-    border: none;
-    font-family: Futura;
-    text-decoration: none;
-    max-width: 200px;
 
-    &:hover {
-    background: #0B24F5;
-    color: #FFFFFF;
-    }
-    `;
 
 export const YellowButton = styled.button`
     display: flex;

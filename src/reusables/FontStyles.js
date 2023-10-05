@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 // NAME STYLING
 export const NameStyling = styled.h1`
-    color: #e63946;
+    color: ${props => props.theme.colors.vibrantPink};
    
     font-weight: 700;
     font-size: 28px;
@@ -34,11 +34,17 @@ export const PlusTextStyling = styled.h4`
 
 // SECTION TITLES
 export const SectionTitle = styled.h2`
-    color: #e63946;
+    color: ${props => props.theme.colors.vibrantPink};
     font-weight: 700;
     font-size: 80px;
     line-height: 108px;
-    margin: 35px 0 35px 0;
+    margin: 35px 0 35px 30px;
+    @media screen and (min-width: 668px) {
+        display: flex;
+        justify-content: center;
+        margin: 10, 0, 10, 0;
+        
+    }
     `;
 
 // SECTION TITLES2

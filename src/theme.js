@@ -2,17 +2,21 @@
 // theme.js
 const theme = {
   colors: {
-    primary: '#9db5b5',
-    primaryshade: '#9db5b56e',
-    secondary: '#ffb8d1',
-    background: '#e0e1e9',
-    lightbackground: '#E2D5D9',
-    text: '#212121',
-    lighttext: '#e7cee3',
-    primarydark: '#212121',
-    cta: '#e9dcacf0',
-    ctahover: '#8e825770',
-    hover: '#E2D5D9'
+    deepPurple: '#760055',
+    vibrantPink: '#b71d8b',
+    lightPink: '#ff9ee4',
+    palePink: '#ffe5f8',
+    lightGreen: '#e4ff9e',
+    lightBlue: '#9ee4ff',
+    // new pastel and more opaque color palette
+    deepPurplePastel: '#76005566',
+    vibrantPinkPastel: '#f2cce71f',
+    lightPinkPastel: '#ff9ee466',
+    palePinkPastel: '#ffe5f866',
+    lightGreenPastel: '#d2e7d8',
+    lightBluePastel: '#9ee4ff66',
+    paleYellow: '#bbc08430',
+
   },
   fonts: {
     primaryFont: 'Satoshi',
