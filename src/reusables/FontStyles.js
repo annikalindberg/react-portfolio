@@ -67,8 +67,8 @@ export const ParagraphText = styled.p`
 
 // BLUEBACKGROUND TEXT
 export const BlueBackgroundText = styled.p`
-    color: #FFFFFF;
-    background-color: #0B24F5;
+    color: ${props => props.theme.colors.primaryDark};
+    background-color: ${props => props.theme.colors.lightBlue};
     font-weight: 400;
     font-size: 22px;
     line-height: 28.71px;
@@ -77,19 +77,19 @@ export const BlueBackgroundText = styled.p`
 
 // PINKBACKGROUND TEXT
 export const PinkBackgroundText = styled.p`
-    color: #FFFFFF;
-    background-color: #cb133e;
+    color: ${props => props.theme.colors.primaryDark};
+    background-color: #cf81f06e;
     font-weight: 400;
     font-size: 22px;
     line-height: 28.71px;
     display: inline;
     `;
 
-// DARKBLUEBACKGROUND TEXT
-export const DarkBlueBackgroundText = styled.p`
-    color: #FFFFFF;
-    background-color: #06427d;
-    font-weight: 400;
+
+export const LightBlueBackgroundText = styled.p`
+    color: #9c137ac7;
+    background-color: #4ffafac2;
+    font-weight: 500;
     font-size: 22px;
     line-height: 28.71px;
     display: inline;

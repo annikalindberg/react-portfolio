@@ -8,6 +8,7 @@ const theme = {
     palePink: '#ffe5f8',
     lightGreen: '#e4ff9e',
     lightBlue: '#9ee4ff',
+    primaryDark: '#330909',
     // new pastel and more opaque color palette
     deepPurplePastel: '#76005566',
     vibrantPinkPastel: '#f2cce71f',
