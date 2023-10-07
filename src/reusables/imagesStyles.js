@@ -5,10 +5,20 @@ import styled from 'styled-components';
 // PROFILEIMAGE
 export const ProfileImage = styled.img`
     border-radius: 50%;
-    width: 164px; 
-    height: 164px;
+    width: 10rem; 
     object-fit: cover;
     border: solid black 1px;
+   
+
+    @media screen and (min-width: 668px) {
+        width: 11rem;
+         margin-right: 3em;
+         margin-top: 1rem;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 15rem;
+        
+    }
     `;
 
 // PROJECTIMAGES
@@ -36,10 +46,13 @@ export const Icons = styled.img`
     `;
 
 // BACKGROUNDIMAGE TABLET/BIGSCREENS
-export const BackgroundImage = styled.img`
+export const BackgroundImage = styled.div`
     width: 100%; 
-    object-fit: cover;
-    height: 412px;
+background-size: cover;
+background-position: center;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url(${props => props.bgImage});
+    
 
     @media screen and (min-width: 1024px) {
     width: 50vw; 

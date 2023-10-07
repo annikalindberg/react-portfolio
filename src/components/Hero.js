@@ -8,11 +8,18 @@ import annikaprofile from '../assets/profil-square.jpg';
 import ContactLinks from '../reusables/ContactLinks';
 import SVGAnimation from './BakcgroundAnimation';
 import { BackgroundImage } from '../reusables/imagesStyles';
-import rainbow from '../assets/rainbow.jpg';
+
+import { PinkGradientWrapper } from '../reusables/Wrappers';
+
 // //////////// SECTION SPECIFIC STYLING ///////////// //
 
 const PresentationWrapper = styled.section`
-  background: ${({ theme }) => theme.colors.paleYellow};
+  background:radial-gradient(
+      farthest-corner circle at 50% 50%, 
+      #ffc2ff00 1% 1%, #ff58e880 100%
+    )
+  ;
+  
   height: 100%;
 border: 1px solid red;
   text-align: left;
@@ -29,28 +36,11 @@ border: 1px solid red;
   @media screen and (min-width: 1024px) {
   display: flex;
 /*   width: 100%;
- */  padding: 0;
+ */  padding: 100px;
   }
   `;
-/* 
-const SectionTabletPicture = styled.section`
-   height: 100%;
-  display: flex;
-  flex-direction: column;
-  display: none;
-  @media screen and (min-width: 668px) {
-  display: block;
- 
-  }
 
-  @media screen and (min-width: 1024px) {
-  justify-content: flex-end;
-  width: 50%;
-  height: 100%;
-  display: block;
-  }
-  `; */
-const SectionTabletPicture = styled.section`
+const TabletPicture = styled.section`
   background: #EEEEEE;
   height: 100%;
   color: #FFD93D;
@@ -70,34 +60,33 @@ const SectionTabletPicture = styled.section`
   `;
 
 
-export const ProfileImageStructure = styled.div`
+const ProfileImageWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin: 50px 0 30px 0;
+margin-top: 1rem;
+margin-bottom: 1rem;
 
   @media screen and (min-width: 668px) {
   margin: 20px 0 30px 0;
   }
-  `;
+  `
 
-export const InfoStructure = styled.div`
+export const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
 
   @media screen and (min-width: 668px) {
-  margin: 50px 0 0 10px;
+  
   }
   `;
 
-const ParagraphTextStructure = styled.div`
-  @media screen and (min-width: 668px) {
-  padding: 0 10% 5% 10%;
-  }
-  `;
-
-export const ProfileAndInfoStructure = styled.div`
+export const ProfileAndInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  
 
   @media screen and (min-width: 668px) {
   flex-direction: row;
@@ -105,64 +94,59 @@ export const ProfileAndInfoStructure = styled.div`
   }
   `;
 
-export const BigScreenStructure = styled.div`
+/* export const BigScreenWrapper = styled.div`
   @media screen and (min-width: 1024px) {
   display: flex;
   flex-direction: row-reverse;
   border: 1px solid blue;
   }
-  `;
+  `; */
 
 const ProfileInfoParagraphTextStructure = styled.div`
   @media screen and (min-width: 668px) {
   flex-direction: column;
- /*  margin-top: 2vh; */
-  /* margin-bottom: 10vh; */
+
   border: 1px solid green;
   }
 
   @media screen and (min-width: 1024px) {
-  margin-top: 8vh;
+  margin-top: 1vh;
   }
 
-  @media screen and (min-width: 1250px) {
-  margin-top: 22vh;
-  }
-
-  @media screen and (min-width: 2250px) {
-  margin-top: 32vh;
-  }
   `;
+
 
 const HeroSection = () => {
     return (
         <PresentationWrapper>
-        <BigScreenStructure>
-          <SectionTabletPicture>
-            <BackgroundImage src={rainbow} /> 
-                </SectionTabletPicture>
+        {/*         <BigScreenWrapper>
+ */}          {/*           <TabletPicture>
+            <BackgroundImage bgImage='https://images.unsplash.com/photo-1615646549461-b9b9c118f300?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80' />
+          </TabletPicture> */}
                 <ProfileInfoParagraphTextStructure>
-                    <ProfileAndInfoStructure>
-                        <ProfileImageStructure>
-                            <ProfileImage src={annikaprofile} alt="Profile" />
-                        </ProfileImageStructure>
-                        <InfoStructure>
+          <ProfileAndInfoWrapper>
+            <ProfileImageWrapper>
+              <ProfileImage
+                src={annikaprofile} alt="Profile" />
+            </ProfileImageWrapper>
+
+            <InfoWrapper>
                             <NameStyling>Annika Lindberg</NameStyling>
                             <JobTitleStyling>Frontend Developer</JobTitleStyling>
-                            <PlusTextStyling>with fullstack dreams</PlusTextStyling>
-                        </InfoStructure>
-                    </ProfileAndInfoStructure>
-                    <ParagraphTextStructure>
+              <PlusTextStyling>With fullstack dreams</PlusTextStyling>
+            </InfoWrapper>
+          </ProfileAndInfoWrapper>
+          <PinkGradientWrapper>
                         <ParagraphText>
                             As a frontend developer, I bring a broad and user-oriented perspective, as well as a burning passion for code. Before switching careers to tech, I worked within social movement building and non-profit organizations, which helped me
                             develop excellent coordination, teamwork, and communication skills.
                             Now, I'm looking to join a team where I can continue to leverage my skills and grow my expertise in coding, working my way towards contributing to the creation of magical user experiences.
                         </ParagraphText>
-                    </ParagraphTextStructure>
+          </PinkGradientWrapper>
                     <ContactLinks />
                 </ProfileInfoParagraphTextStructure>
-        </BigScreenStructure>
-        </PresentationWrapper>
+        {/*         </BigScreenWrapper>
+ */}        </PresentationWrapper>
     );
 };
 export default HeroSection;

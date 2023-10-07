@@ -9,27 +9,37 @@ export const NameStyling = styled.h1`
     color: ${props => props.theme.colors.vibrantPink};
    
     font-weight: 700;
-    font-size: 28px;
+    font-size: 1.9rem; 
     line-height: 37.8px;
-    margin: 0;
+   margin-top: 1.7rem;
+    @media screen and (min-width: 668px) {
+    margin-top: 3rem;
+    font-size: 2rem;
+    }
     `;
 
 // JOBTITLE STYLING
 export const JobTitleStyling = styled.h3`
     color: #373833;
     font-weight: 900;
-    font-size: 28px;
+    font-size: 1.5rem;
     line-height: 43.2px;
-    margin: 0;
+margin-top: 0.7rem;
+
+    @media screen and (min-width: 668px) {
+    margin-top: 0.6rem;
+    font-size: 1.8rem;
+    }
     `;
+
 
 // + TEXT STYLING
 export const PlusTextStyling = styled.h4`
-    color: grey;
+color: ${ props => props.theme.colors.primaryDark };
     font-weight: 500;
-    font-size: 24px;
+font-size: 1.4rem;
     line-height: 32.4px;
-    margin-bottom: 40px;
+
     `;
 
 // SECTION TITLES
@@ -60,9 +70,8 @@ export const SectionTitle2 = styled.h2`
 export const ParagraphText = styled.p`
     color: #373833;
     font-weight: 400;
-    font-size: 22px;
+font-size: 22px; 
     line-height: 28.71px;
-
     `;
 
 // BLUEBACKGROUND TEXT
