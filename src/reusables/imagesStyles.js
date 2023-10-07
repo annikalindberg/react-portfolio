@@ -38,12 +38,13 @@ export const Icons = styled.img`
 // BACKGROUNDIMAGE TABLET/BIGSCREENS
 export const BackgroundImage = styled.img`
     width: 100%; 
-    height: 412px; 
     object-fit: cover;
+    height: 412px;
 
     @media screen and (min-width: 1024px) {
     width: 50vw; 
-    height: 100vh;
+    height: 60vh;
     object-fit: cover;  
+   
     }
     `;

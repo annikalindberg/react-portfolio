@@ -3,38 +3,53 @@
 import React from 'react';
 import styled from 'styled-components';
 import { JobTitleStyling, NameStyling, ParagraphText, PlusTextStyling } from '../reusables/FontStyles';
-import { ProfileImage, Icons, BackgroundImage } from '../reusables/imagesStyles';
+import { ProfileImage } from '../reusables/imagesStyles';
 import annikaprofile from '../assets/profil-square.jpg';
-import linkedin from '../assets/linkedin.png';
-import github from '../assets/github.png';
-import rainbow from '../assets/rainbow.jpg';
-import Hero from './Hero';
 import ContactLinks from '../reusables/ContactLinks';
-
+import SVGAnimation from './BakcgroundAnimation';
+import { BackgroundImage } from '../reusables/imagesStyles';
+import rainbow from '../assets/rainbow.jpg';
 // //////////// SECTION SPECIFIC STYLING ///////////// //
 
 const PresentationWrapper = styled.section`
   background: ${({ theme }) => theme.colors.paleYellow};
   height: 100%;
-  color: #FFFFFF;
+border: 1px solid red;
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  padding: 24px;
-
+  justify-content: center;
+   padding: 24px;
+ 
   @media screen and (min-width: 668px) {
   display: flex;
-  padding: 0 0 25px 0;
+  padding: 0 0 25px 0; 
   }
 
   @media screen and (min-width: 1024px) {
   display: flex;
-  width: 100%;
-  padding: 0;
+/*   width: 100%;
+ */  padding: 0;
   }
   `;
+/* 
+const SectionTabletPicture = styled.section`
+   height: 100%;
+  display: flex;
+  flex-direction: column;
+  display: none;
+  @media screen and (min-width: 668px) {
+  display: block;
+ 
+  }
 
+  @media screen and (min-width: 1024px) {
+  justify-content: flex-end;
+  width: 50%;
+  height: 100%;
+  display: block;
+  }
+  `; */
 const SectionTabletPicture = styled.section`
   background: #EEEEEE;
   height: 100%;
@@ -50,23 +65,10 @@ const SectionTabletPicture = styled.section`
 
   @media screen and (min-width: 1024px) {
   justify-content: flex-end;
-  height: 100vh;
+  height: 60vh;
   }
   `;
 
-const List = styled.ul`
-  list-style-type: none;
-  padding-left: 0;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 25px 0 30px 0;
-
-  @media screen and (min-width: 668px) {
-  justify-content: flex-start;
-  padding-left: 10%;
-  gap: 40px;
-  }
-  `;
 
 export const ProfileImageStructure = styled.div`
   display: flex;
@@ -107,17 +109,20 @@ export const BigScreenStructure = styled.div`
   @media screen and (min-width: 1024px) {
   display: flex;
   flex-direction: row-reverse;
+  border: 1px solid blue;
   }
   `;
 
 const ProfileInfoParagraphTextStructure = styled.div`
   @media screen and (min-width: 668px) {
   flex-direction: column;
-  margin-top: 40px;
+ /*  margin-top: 2vh; */
+  /* margin-bottom: 10vh; */
+  border: 1px solid green;
   }
 
   @media screen and (min-width: 1024px) {
-  margin-top: 10vh;
+  margin-top: 8vh;
   }
 
   @media screen and (min-width: 1250px) {
@@ -132,9 +137,9 @@ const ProfileInfoParagraphTextStructure = styled.div`
 const HeroSection = () => {
     return (
         <PresentationWrapper>
-            <BigScreenStructure>
-                <SectionTabletPicture>
-                    <BackgroundImage src={rainbow} alt="background rainbow" />
+        <BigScreenStructure>
+          <SectionTabletPicture>
+            <BackgroundImage src={rainbow} /> 
                 </SectionTabletPicture>
                 <ProfileInfoParagraphTextStructure>
                     <ProfileAndInfoStructure>
@@ -156,7 +161,7 @@ const HeroSection = () => {
                     </ParagraphTextStructure>
                     <ContactLinks />
                 </ProfileInfoParagraphTextStructure>
-            </BigScreenStructure>
+        </BigScreenStructure>
         </PresentationWrapper>
     );
 };

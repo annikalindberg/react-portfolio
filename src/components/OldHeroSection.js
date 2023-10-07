@@ -4,10 +4,23 @@
 import React from 'react';
 import styled from 'styled-components';
 import profileSquare from '../assets/profil-square.jpg';
-import { HeadlineWrapper, ProfileImageWrapper, TextWrapper, HeroWrapper } from '../reusables/Wrappers';
+/* import { HeadlineWrapper, ProfileImageWrapper, TextWrapper, HeroWrapper } from '../reusables/Wrappers'; */
 import ContactIconBar from '../reusables/ContactLinks';
 import LetsScroll from '../reusables/ScrollIcon';
 import HeroBackgroundImage from '../assets/rainbow.jpg';
+
+const HeroWrapper = styled.section`
+display: flex;
+max-height: 200px;
+// desktop and larger
+@media screen and (min-width: 1024px ) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10% 90px 10%;
+}
+`;
 
 // Use uppercase for styled component names
 const ProfilePicture = styled.img`
@@ -43,10 +56,10 @@ line-height: 1.7rem;
 `;
 
 const HeroBackground = styled.img`
- background: #EEEEEE;
+/*  background: #EEEEEE;
   height: 100%;
   color: #FFD93D;
-  text-align: left;
+  text-align: left; */
   flex-direction: column;
   justify-content: left;
   display: none;
@@ -59,11 +72,12 @@ const HeroBackground = styled.img`
   background-image: url(${HeroBackgroundImage});
 background-size: cover;
 width: 100%;
-max-height: 412px;
+/* max-height: 412px; */
 }
   @media screen and (min-width: 1024px) {
   justify-content: flex-end;
-  height: 100vh;
+  height: 300px;
+/*   height: 100vh; */
   }
   `
 
