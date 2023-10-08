@@ -17,6 +17,7 @@ const theme = {
     lightGreenPastel: '#d2e7d8',
     lightBluePastel: '#9ee4ff66',
     paleYellow: '#bbc08430',
+    sectionsBackground: '#f8e5e5',
 
   },
   fonts: {

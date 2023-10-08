@@ -4,9 +4,9 @@ import styled from 'styled-components';
 
 export const PrimaryButton = styled.button`
     display: flex;
-    flex-direction: row;
+   
     align-items: center;
-    padding: 12px 12px 12px 12px;
+    padding: 17px;
     background: ${({ theme, variant }) => variant === 'alternative' ? theme.colors.lightGreenPastel : theme.colors.lightBlue};
     border-radius: 20px;
     font-style: normal;
@@ -17,13 +17,18 @@ export const PrimaryButton = styled.button`
     font-family: Futura;
     text-decoration: none;
     max-width: 200px;
-    margin: 1.25rem 1.25rem 1.875rem 0;
+    margin: 15px 30px 0;
+    
     border-top: 1px solid black;
 
     &:hover {
     background: ${({ theme }) => theme.colors.lightBluePastel};
     color: black;
     border-bottom: 1px solid black;
+    }
+    @media screen and (min-width: 668px) {
+        margin: 1.25rem 1.25rem 1.875rem 0;
+        
     }
     `;
 

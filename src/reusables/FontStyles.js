@@ -5,24 +5,24 @@ import styled from 'styled-components';
 // ////////////// TEXT STYLING /////////////// //
 
 // NAME STYLING
-export const NameStyling = styled.h1`
+export const Name = styled.h1`
     color: ${props => props.theme.colors.vibrantPink};
    
     font-weight: 700;
-    font-size: 1.9rem; 
+    font-size: 1.6rem; 
     line-height: 37.8px;
    margin-top: 1.7rem;
     @media screen and (min-width: 668px) {
     margin-top: 3rem;
-    font-size: 2rem;
+    font-size: 1%.9;
     }
     `;
 
 // JOBTITLE STYLING
-export const JobTitleStyling = styled.h3`
+export const JobTitle = styled.h3`
     color: #373833;
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     line-height: 43.2px;
 margin-top: 0.7rem;
 
@@ -46,32 +46,31 @@ font-size: 1.4rem;
 export const SectionTitle = styled.h2`
     color: ${props => props.theme.colors.vibrantPink};
     font-weight: 700;
-    font-size: 80px;
+    font-size: 64px;
     line-height: 108px;
     margin: 35px 0 35px 30px;
     @media screen and (min-width: 668px) {
         display: flex;
         justify-content: center;
         margin: 10, 0, 10, 0;
+        font-size: 80px;
         
     }
     `;
 
-// SECTION TITLES2
-export const SectionTitle2 = styled.h2`
-    color: #e63946;
-    font-weight: 900;
-    font-size: 52px;
-    line-height: 78px;
-    margin: 35px auto 20px auto;
+
+export const OnDarkText = styled.p`
+    color: white;
+    font-weight: 400;
+font-size: 20px; 
+    line-height: 28.71px;
     `;
 
-// PARAGRAPH STYLING
-export const ParagraphText = styled.p`
-    color: #373833;
-    font-weight: 400;
-font-size: 22px; 
-    line-height: 28.71px;
+export const OnLightText = styled.p`
+color: ${props => props.theme.colors.primaryDark};
+font-weight: 400;
+font-size: 20px;
+line-height: 28.71px;
     `;
 
 // BLUEBACKGROUND TEXT
@@ -128,11 +127,12 @@ export const GreenBackgroundText = styled.p`
 export const ProjectTitle = styled.h2`
     color: #373833;
     font-weight: 900;
-    font-size: 32px;
+    font-size: 30px;
     line-height: 43.2px;
     margin: 20px 0 15px 0;
 
     @media screen and (min-width: 668px) {
     margin-top: 5px;
+    font-size: 32px;
     }
     `;

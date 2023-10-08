@@ -7,13 +7,21 @@ import EmailIcon from '../assets/emailicon.png';
 
 const ContactIconsWrapper = styled.div`
 display: flex;
+justify-content: center;
 
-justify-content: flex-start;
-margin-left: 6rem;
+margin-top: 1rem;
 
 //tablet and larger
-@media screen and (min-width: 768px) {
-   // align vertically with the headline
+@media screen and (min-width: 668px) {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #f1b7e35c;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+border-radius: 10px;
+  margin: 2rem;
+ 
+
+
   
 
    
@@ -23,10 +31,10 @@ margin-left: 6rem;
 const Icon = styled.img`
   width: 2rem;
   margin: 1rem;
-    transition: transform 0.2s ease; // Add a smooth transition for the hover effect
-    flex-shrink: 0; // Prevent the icon from shrinking when the window is too small
+    flex-shrink: 0; 
 &:hover {
     transform: scale(1.2); // Scale up the icon on hover
+     transition: transform 0.2s ease; 
   }
  
 `;

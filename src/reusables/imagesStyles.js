@@ -16,7 +16,7 @@ export const ProfileImage = styled.img`
          margin-top: 1rem;
     }
     @media screen and (min-width: 1024px) {
-        width: 15rem;
+        width: 10rem;
         
     }
     `;

@@ -3,7 +3,7 @@ import projects from './ProjectsArray';
 import styled from 'styled-components';
 import { PrimaryButton } from '../reusables/Buttons';
 import { ProjectImage } from 'reusables/imagesStyles';
-import { SectionTitle, ProjectTitle, ParagraphText } from 'reusables/FontStyles';
+import { SectionTitle, ProjectTitle, OnLightText } from 'reusables/FontStyles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import Select from 'react-select';
@@ -86,7 +86,7 @@ const ProjectContent = () => {
 background-color: ${({ theme }) => theme.colors.vibrantPinkPastel};
     @media screen and (min-width: 668px) {
   display: flex;
-  box-shadow: 0dvw 0.2dvh 0.5rem rgba(0, 0, 0, 0.5); // top, right, bottom, left dvw = 1% of viewport width to set the shadow only bottom and right, dvh = 1% of viewport height to set the shadow only bottom and right
+  box-shadow: 0dvw 0.2dvh 0.5rem rgba(0, 0, 0, 0.5); 
     }
     @media screen and (min-width: 1024px) {
         margin-right: 15%;
@@ -136,8 +136,9 @@ background-color: ${({ theme }) => theme.colors.vibrantPinkPastel};
 `;
     const ButtonWrapper = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2rem 0.5rem 0.5rem 0.5rem;
 
 
     @media screen and (min-width: 668px) {
@@ -207,7 +208,7 @@ background-color: ${({ theme }) => theme.colors.vibrantPinkPastel};
                         < InnerWrapper>
                             <ProjectTitle>{project.title}</ProjectTitle>
                             <ProjectTextWrapper>
-                                <ParagraphText>{project.description}</ParagraphText>
+                                <OnLightText>{project.description}</OnLightText>
                             </ProjectTextWrapper>
                             <ul>
                                 {project.stack.map((lang, i) => (
