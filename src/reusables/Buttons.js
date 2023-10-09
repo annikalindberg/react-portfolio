@@ -3,10 +3,11 @@ import styled from 'styled-components';
 
 
 export const PrimaryButton = styled.button`
-    display: flex;
+   
    
     align-items: center;
-    align-content: center;
+   flex-grow: 1;
+  text-align: center; // optional, to center the text
     padding: 13px;
     background: ${({ theme, variant }) => variant === 'alternative' ? theme.colors.lightGreenPastel : theme.colors.lightBlue};
     border-radius: 20px;
@@ -17,15 +18,16 @@ export const PrimaryButton = styled.button`
     border: none;
     font-family: Futura;
     text-decoration: none;
-    max-width: 14rem;
-    margin: 10px 30px 15px 30px; // 
-    
+   
+    margin: 10px 30px 15px 30px; 
+    max-width: 12rem;
     border-top: 1px solid black;
 
     &:hover {
     background: ${({ theme }) => theme.colors.lightBluePastel};
     color: black;
     border-bottom: 2px solid black;
+
     }
     @media screen and (min-width: 668px) {
         margin: 1.25rem 3rem 1.875rem 0;

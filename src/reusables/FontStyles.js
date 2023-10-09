@@ -43,16 +43,16 @@ font-size: 1.4rem;
     `;
 
 // SECTION TITLES
-export const SectionTitle = styled.h2`
+export const SectionTitle = styled.p`
     color: ${props => props.theme.colors.vibrantPink};
     font-weight: 700;
     font-size: 64px;
     line-height: 108px;
-    margin: 35px 0 35px 30px;
+    margin: 30px 0 35px 30px;
     @media screen and (min-width: 668px) {
         display: flex;
         justify-content: center;
-        margin: 10, 0, 10, 0;
+        margin: 5, 0, 10, 0;
         font-size: 80px;
         
     }

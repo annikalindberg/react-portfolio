@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SectionWrapper = styled.section`
-  background: #F8E5E5;
+  background: ${props => props.theme.colors.sectionsBackground};
   height: 100%;
   
   text-align: center;
@@ -47,7 +47,7 @@ margin-bottom: 1rem;
   }
   `
 export const PresentationWrapper = styled.section`
-  background: #d1ecef80;
+  background: ${props => props.theme.colors.heroBackground};
   
   height: 100%;
   box-shadow: 0dvw 0.2dvh 0.5rem rgba(0, 0, 0, 0.5);

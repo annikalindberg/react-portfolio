@@ -8,6 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import Select from 'react-select';
 import theme from 'theme';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+
 
 const ProjectContent = () => {
     const [selectedStack, setSelectedStack] = useState('all');
@@ -83,15 +86,18 @@ const ProjectContent = () => {
 
 
     const ProjectWrapper = styled.li`
-background-color: ${({ theme }) => theme.colors.vibrantPinkPastel};
+background-color: ${({ theme }) => theme.colors.heroBackground};
  box-shadow: 0dvw 0.2dvh 0.5rem rgba(0, 0, 0, 0.5); 
+ 
     @media screen and (min-width: 668px) {
   display: flex;
+
  
     }
     @media screen and (min-width: 1024px) {
-        margin-right: 15%;
-        margin-left: 15%;
+        margin-right: 10%;
+        margin-left: 10%;
+        
     }
   
 `;
@@ -129,16 +135,21 @@ background-color: ${({ theme }) => theme.colors.vibrantPinkPastel};
   background-color: ${({ theme }) => theme.colors.lightGreen};
   color: black;
   padding: 5px;
-  margin: 2px;
+  font-size: 1rem;
+  margin: 0.5rem 0rem 0rem 0.4rem;
   border-radius: 3px; 
   display: inline-block; // for horizontal layout 
 
-  
+ @media screen and (min-width: 668px) {
+    margin: 0.5rem 0.3rem 0rem 0.5rem;
+    font-size: 1.1rem;
+ }
 `;
     const ButtonWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     margin: 2rem 0.5rem 0.5rem 0.5rem;
 
 
@@ -154,40 +165,22 @@ background-color: ${({ theme }) => theme.colors.vibrantPinkPastel};
      border-radius: 8px;
      padding: 5px;
      display: flex;
+     font-size: 1.3rem;
        justify-content: center;
         @media screen and (min-width: 668px) {
-            
+            margin-right: 10%;
              justify-content: flex-end;
+             font-size: 1.2rem;
         }
    `;
-
-    /*  const StyledSelect = styled.select`
-   width: 100%;
-   height: 40px;
-  background-color: ${({ theme }) => theme.colors.vibrantPinkPastel};
-   color: #000;
-   
-   font-size: 0.9rem;
-   border: none;
-   border-radius: 8px;
-   padding: 10px;
-   appearance: none; /* Remove default appearance */
-
-    /* &:focus {
-      outline: none;
-      border-color: #007bff; /* Change border color on focus */
-    /*   }
-    `;
-    
-        const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
-      margin-right: 50px; 
-      margin-top: 6px;
-    `;   */
 
 
 
     return (
-        <div>
+        <main
+            style={{ backgroundColor: theme.colors.sectionsBackground }
+            }
+        >
             <SectionTitle>Featured Projects</SectionTitle>
             <DropdownWrapper>
                 <Select
@@ -204,8 +197,11 @@ background-color: ${({ theme }) => theme.colors.vibrantPinkPastel};
                     <ProjectWrapper key={index}>
 
                         <ImageWrapper>
-                            <a href={project.LiveDemoLink} target="_blank" rel="noopener noreferrer"></a>
+                            <a href={project.LiveDemoLink}
+                                target="_blank" rel="noopener noreferrer">
+
                             <ProjectImage src={project.image} alt={project.title} />
+                            </a>
                         </ImageWrapper>
                         < InnerWrapper>
                             <ProjectTitle>{project.title}</ProjectTitle>
@@ -220,15 +216,21 @@ background-color: ${({ theme }) => theme.colors.vibrantPinkPastel};
                             <ButtonWrapper>
                                 <PrimaryButton
                                     variant="alternative"
-                                    onClick={() => window.open(project.githubLink)}>View the code</PrimaryButton>
-                                <PrimaryButton onClick={() => window.open(project.LiveDemoLink)}>Live demo</PrimaryButton>
+                                    onClick={() => window.open(project.githubLink)}>
+                                    <FontAwesomeIcon icon={faGithub}
+                                        style={{ marginRight: '10px' }} /> View the code</PrimaryButton>
+                                <PrimaryButton
+                                    onClick={() => window.open(project.LiveDemoLink)}>
+                                    <FontAwesomeIcon
+                                        style={{ marginRight: '10px' }} icon={faGlobe} />
+                                    Live demo</PrimaryButton>
                             </ButtonWrapper>
                         </InnerWrapper>
                     </ProjectWrapper>
 
                 ))}
             </ul>
-        </div>
+        </main >
     );
 }
 

@@ -32,6 +32,7 @@ export const FooterWrapper = styled.section`
   display: flex;
 /*   width: 100%;
  */  padding: 100px;
+
   }
   `;
 
@@ -106,12 +107,17 @@ const ContactWrapper = styled.div`
 
 const NewFooter = () => {
     const scrollToTop = () => {
-        window.scrollTo(0, 0);
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+
     };
 
     return (
         <FooterWrapper>
-            <SectionTitle> Lets Talk! </SectionTitle>
+            <SectionTitle> Time to talk! </SectionTitle>
             {/* <ProfileInfoParagraphTextStructure> */}
             <ProfileAndInfoWrapper>
                 <ProfileImageWrapper>
