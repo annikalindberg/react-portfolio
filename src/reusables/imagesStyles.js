@@ -24,13 +24,14 @@ export const ProfileImage = styled.img`
 // PROJECTIMAGES
 export const ProjectImage = styled.img`
     width: 100%; 
-    height: auto;
     object-fit: cover;
-    margin: auto;
+    margin: 1rem 0 1rem 0;
 
+box-shadow: -1px 4px 53px 10px rgba(50, 38, 38, 0.5);
     @media screen and (min-width: 668px) {
     width: 190px; 
     object-fit: cover;  
+   
     }
     `;
 

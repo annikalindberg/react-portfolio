@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import { PrimaryButton } from '../reusables/Buttons';
 import { ProjectImage } from 'reusables/imagesStyles';
 import { SectionTitle, ProjectTitle, OnLightText } from 'reusables/FontStyles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Select from 'react-select';
 import theme from 'theme';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -88,7 +87,7 @@ const ProjectContent = () => {
     const ProjectWrapper = styled.li`
 background-color: ${({ theme }) => theme.colors.heroBackground};
  box-shadow: 0dvw 0.2dvh 0.5rem rgba(0, 0, 0, 0.5); 
- 
+box-sizing: border-box;
     @media screen and (min-width: 668px) {
   display: flex;
 
@@ -128,7 +127,7 @@ background-color: ${({ theme }) => theme.colors.heroBackground};
     margin: 2rem 1rem 1rem 1rem;
     
    
-    `
+    `;
 
 
     const TechTag = styled.li`

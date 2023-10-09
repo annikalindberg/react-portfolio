@@ -39,7 +39,7 @@ export const FooterWrapper = styled.section`
 const EmailLink = styled.a`
     display: flex;
     align-items: center;
-    color: #007bff;
+    color: ${props => props.theme.colors.primaryDark};
     text-decoration: none;
     font-size: 1.2rem;
 
@@ -78,18 +78,20 @@ const TopButton = styled.button`
 const PhoneLink = styled.a`
     display: flex;
     align-items: center;
-      color: #007bff;
+      color: ${props => props.theme.colors.primaryDark};
     text-decoration: underline;
     margin-bottom: 2rem;
 font-size: 1.2rem;
+text-decoration: none;
+
     svg {
         margin-right: 10px;
     }
     :hover {
-        background-color: #007bff;
+    
         color: #fff;
         border-radius: 8px;
-
+text-decoration: underline;
     }
 
 `;
