@@ -84,9 +84,10 @@ const ProjectContent = () => {
 
     const ProjectWrapper = styled.li`
 background-color: ${({ theme }) => theme.colors.vibrantPinkPastel};
+ box-shadow: 0dvw 0.2dvh 0.5rem rgba(0, 0, 0, 0.5); 
     @media screen and (min-width: 668px) {
   display: flex;
-  box-shadow: 0dvw 0.2dvh 0.5rem rgba(0, 0, 0, 0.5); 
+ 
     }
     @media screen and (min-width: 1024px) {
         margin-right: 15%;
@@ -136,8 +137,8 @@ background-color: ${({ theme }) => theme.colors.vibrantPinkPastel};
 `;
     const ButtonWrapper = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     margin: 2rem 0.5rem 0.5rem 0.5rem;
 
 
@@ -153,10 +154,10 @@ background-color: ${({ theme }) => theme.colors.vibrantPinkPastel};
      border-radius: 8px;
      padding: 5px;
      display: flex;
-        justify-content: flex-end;
+       justify-content: center;
         @media screen and (min-width: 668px) {
-            justify-content: center;
             
+             justify-content: flex-end;
         }
    `;
 
@@ -203,6 +204,7 @@ background-color: ${({ theme }) => theme.colors.vibrantPinkPastel};
                     <ProjectWrapper key={index}>
 
                         <ImageWrapper>
+                            <a href={project.LiveDemoLink} target="_blank" rel="noopener noreferrer"></a>
                             <ProjectImage src={project.image} alt={project.title} />
                         </ImageWrapper>
                         < InnerWrapper>

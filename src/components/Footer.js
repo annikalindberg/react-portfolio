@@ -1,46 +1,49 @@
+// /////////////// IMPORTS //////////////////////// //
+
+import React from 'react';
 import styled from 'styled-components';
-import { ProfileImageWrapper, InfoWrapper, ProfileAndInfoWrapper, PresentationWrapper, SectionWrapper } from 'reusables/Wrappers';
-import { JobTitle, Name, OnLightText, PlusTextStyling, SectionTitle } from '../reusables/FontStyles';
+import { JobTitle, Name, SectionTitle, } from '../reusables/FontStyles';
 import { ProfileImage } from '../reusables/imagesStyles';
 import annikaprofile from '../assets/profil-square.jpg';
+/* import SVGAnimation from './BakcgroundAnimation';
+ */
+import { ProfileImageWrapper, PinkGradientWrapper, ProfileAndInfoWrapper, InfoWrapper } from '../reusables/Wrappers';
 import ContactLinks from '../reusables/ContactLinks';
 import { FaArrowUp, FaEnvelope, FaPhone } from 'react-icons/fa';  // Import icons
 
-
-const FooterStyled = styled.footer`
-  display: flex;
-    flex-direction: column;
-    align-items: center;
-
-  @media (min-width: 768px) {
-    align-items: center;
-  }
-
-  @media (min-width: 1024px) {
-    align-items: center;
-    margin: 62px 0;
-  }
-`;
-
-const AboutMe = styled.div`
+export const FooterWrapper = styled.section`
+  background: #F8E5E5;
+  
+  height: 100%;
+  box-shadow: 0dvw 0.2dvh 0.5rem rgba(0, 0, 0, 0.5);
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    margin: 24px;
+  justify-content: center;
+   padding: 10px 20px 10px 20px; 
+   
+ 
+  @media screen and (min-width: 668px) {
+  display: flex;
+  padding: 0 0 25px 0; 
   }
-`;
+
+  @media screen and (min-width: 1024px) {
+  display: flex;
+/*   width: 100%;
+ */  padding: 100px;
+  }
+  `;
 
 const EmailLink = styled.a`
     display: flex;
     align-items: center;
     color: #007bff;
     text-decoration: none;
+    font-size: 1.2rem;
 
     svg {
-        margin-right: 8px;
+        margin-right: 10px;
     }
 
     &:hover {
@@ -76,9 +79,10 @@ const PhoneLink = styled.a`
     align-items: center;
       color: #007bff;
     text-decoration: underline;
-
+    margin-bottom: 2rem;
+font-size: 1.2rem;
     svg {
-        margin-right: 8px;
+        margin-right: 10px;
     }
     :hover {
         background-color: #007bff;
@@ -88,38 +92,41 @@ const PhoneLink = styled.a`
     }
 
 `;
-
-const FooterNameAndTitle = styled.div`
+const ContactWrapper = styled.div`
+ width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    `;
+   padding: 1rem;
 
+    @media screen and (min-width: 668px) {
 
-const Footer = () => {
+        padding: 10px 20px 10px 20px;
+    }
+`;
+
+const NewFooter = () => {
     const scrollToTop = () => {
         window.scrollTo(0, 0);
     };
 
-
     return (
-        <>
-            <SectionWrapper>
-                <FooterStyled>
-                    <SectionTitle>Time to talk</SectionTitle>
-                    <FooterNameAndTitle >
-                        <OnLightText>Let's get in touch!</OnLightText>
+        <FooterWrapper>
+            <SectionTitle> Lets Talk! </SectionTitle>
+            {/* <ProfileInfoParagraphTextStructure> */}
+            <ProfileAndInfoWrapper>
+                <ProfileImageWrapper>
+                    <ProfileImage
+                        src={annikaprofile} alt="Profile" />
+                </ProfileImageWrapper>
 
-                        <ProfileImage
-                            style={{ width: '7rem' }}
-                            src={annikaprofile} alt="Profile of Annika" />
+                <InfoWrapper>
+                    <Name>Annika Lindberg</Name>
+                    <JobTitle>Frontend Developer</JobTitle>
 
-                        <Name>Annika Lindberg</Name>
-                        <JobTitle>Frontend Developer</JobTitle>
-
-                    </FooterNameAndTitle>
+                </InfoWrapper>
+            </ProfileAndInfoWrapper>
+            <PinkGradientWrapper>
+                <ContactWrapper >
                     <PhoneLink href="tel:+46707533568">
                         <FaPhone /> {/* Phone Icon */}
                         +46(0) 707 53 35 68
@@ -129,20 +136,13 @@ const Footer = () => {
                         annika.edit.lindberg@gmail.com
                     </EmailLink>
 
-
-                    <ContactLinks />
-
-                </FooterStyled >
-
-                <TopButton onClick={scrollToTop} id="top-button" title="Scroll to top">
-                    <FaArrowUp />
-                </TopButton>
-            </SectionWrapper >
-        </>
+                </ContactWrapper>
+            </PinkGradientWrapper>
+            <ContactLinks />
+            <TopButton onClick={scrollToTop} id="top-button" title="Scroll to top">
+                <FaArrowUp />
+            </TopButton>
+        </FooterWrapper>
     );
-
-
 };
-
-
-export default Footer;
+export default NewFooter;

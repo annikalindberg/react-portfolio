@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from './theme';
 import ProjectContent from './components/ProjectsSection';
 import TechStack from './components/TechStack';
-import Footer from './components/Footer';
+import NewFooter from './components/Footer';
 
 export const App = () => {
   return (
@@ -14,7 +14,7 @@ export const App = () => {
         <HeroSection />
         <TechStack />
         <ProjectContent />
-        <Footer />
+        <NewFooter />
       </ThemeProvider>
 
     </div>
