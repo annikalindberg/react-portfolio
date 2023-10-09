@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const SectionWrapper = styled.section`
   background: #F8E5E5;
   height: 100%;
-  color: yellow;
+  
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: flex-start;
   padding: 0px 24px 90px 24px;
     box-shadow: 0dvw 0.2dvh 0.5rem rgba(0, 0, 0, 0.5);
 
