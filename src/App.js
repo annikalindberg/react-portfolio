@@ -6,6 +6,7 @@ import theme from './theme';
 import ProjectContent from './components/ProjectsSection';
 import TechStack from './components/TechStack';
 import NewFooter from './components/Footer';
+import Skills from './components/Skills';
 
 export const App = () => {
   return (
@@ -14,6 +15,7 @@ export const App = () => {
         <HeroSection />
         <TechStack />
         <ProjectContent />
+        <Skills />
         <NewFooter />
       </ThemeProvider>
 
