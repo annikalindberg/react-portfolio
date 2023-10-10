@@ -65,13 +65,20 @@ export const Skills = () => {
                     </LightBlueBackgroundText>
                     <OnLightText>
                         <List>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>Javascript ES6</li>
                             <li>React</li>
+                            <li>HTML5</li>
+                            <li>Javascript ES6</li>
+                            <li>Redux</li>
+                            <li>CSS3</li>
+                            <li>SASS/LESS</li>
+                            <li>RESTful APIs</li>
                             <li>JSX</li>
                             <li>Node.js</li>
-                            <li>Redux</li>
+                            <li>Express.js</li>
+                            <li>MongoDB</li>
+                            <li>Mongoose</li>
+
+
                         </List>
                     </OnLightText>
                 </SkillFrame>
@@ -80,9 +87,13 @@ export const Skills = () => {
                     <OnLightText>
                         <List>
                             <li>Adobe Photoshop</li>
-                            <li>Adobe Illustrator</li>
+                            <li>Responsive Design</li>
+                            <li>Web Accessibly</li>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>Visual Studio Code</li>
                             <li>Figma</li>
-                            <li>Slack</li>
+                            <li>Code Reviews</li>
                             <li>Postman</li>
                         </List>
                     </OnLightText>
@@ -91,7 +102,10 @@ export const Skills = () => {
                     <PinkBackgroundText>More</PinkBackgroundText>
                     <OnLightText>
                         <List>
-                            <li>Agile methdology</li>
+                            <li>Agile Methdology</li>
+                            <li>Pair-Programming</li>
+                            <li>Team Collaboration</li>
+                            <li>CI/CD</li>
                         </List>
                     </OnLightText>
                 </SkillFrame>
@@ -99,8 +113,8 @@ export const Skills = () => {
                     <LightBlueBackgroundText>Upcomming</LightBlueBackgroundText>
                     <OnLightText>
                         <List>
-                            <li>Tailwind</li>
-                            <li>Docker</li>
+                            <li>TypeScript</li>
+                            <li>React Native</li>
                         </List>
                     </OnLightText>
                 </SkillFrame>

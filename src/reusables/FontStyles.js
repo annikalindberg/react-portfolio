@@ -49,6 +49,14 @@ export const SectionTitle = styled.p`
     font-size: 64px;
     line-height: 108px;
     margin: 30px 0 35px 30px;
+
+    :hover {
+         transform: scale(1.1);
+        transition: transform 0.5s ease-in-out;
+        cursor: pointer;
+        
+    }
+
     @media screen and (min-width: 668px) {
         display: flex;
         justify-content: center;

@@ -108,9 +108,14 @@ box-sizing: border-box;
     flex-direction: column;
     margin: 2rem 1rem 1rem 1rem;
     max-width: 30%;
+
+    :hover {
+        transform: scale(1.1);
+        transition: transform 0.5s ease-in-out;
+        cursor: pointer;
+
     
     }`
-
 
     const ProjectTextWrapper = styled.div`
   display: flex;
@@ -203,7 +208,10 @@ box-sizing: border-box;
                             </a>
                         </ImageWrapper>
                         < InnerWrapper>
-                            <ProjectTitle>{project.title}</ProjectTitle>
+                            <a href={project.LiveDemoLink}
+                                target="_blank" rel="noopener noreferrer">
+                                <ProjectTitle>{project.title}</ProjectTitle>
+                            </a>
                             <ProjectTextWrapper>
                                 <OnLightText>{project.description}</OnLightText>
                             </ProjectTextWrapper>
