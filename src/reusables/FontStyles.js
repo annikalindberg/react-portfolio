@@ -49,6 +49,7 @@ export const SectionTitle = styled.p`
     font-size: 64px;
     line-height: 108px;
     margin: 30px 0 35px 30px;
+    text-decoration: none;
 
     :hover {
          transform: scale(1.1);
