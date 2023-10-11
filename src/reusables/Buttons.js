@@ -7,8 +7,8 @@ export const PrimaryButton = styled.button`
    
     align-items: center;
    flex-grow: 1;
-  
-    padding: 10px;
+    text-align: center; // optional, to center the text
+    padding: 7px;
     background: ${({ theme, variant }) => variant === 'alternative' ? theme.colors.lightGreenPastel : theme.colors.lightBlue};
     border-radius: 20px;
     font-style: normal;
@@ -20,9 +20,9 @@ export const PrimaryButton = styled.button`
     text-decoration: none;
 
     margin: 8px 30px 15px 30px; 
-    max-width: 12rem;
+
     border-top: 1px solid black;
-    max-height: 50px;
+     
 
 
     &:hover {
