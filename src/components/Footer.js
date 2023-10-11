@@ -98,13 +98,14 @@ text-decoration: underline;
 const ContactWrapper = styled.div`
  width: 100%;
     display: flex;
+    align-items: center;
     flex-direction: column;
    max-width: 700px;
    margin: 0 auto;
 
     @media screen and (min-width: 668px) {
 margin: 0 auto;
-
+text-align: flex-end;
     }
 `;
 
