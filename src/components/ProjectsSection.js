@@ -178,7 +178,15 @@ box-sizing: border-box;
         }
    `;
 
+    const StyledLink = styled.a`
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+    color: ${({ theme }) => theme.colors.primaryDark};
 
+  }
+`;
 
     return (
         <main
@@ -208,10 +216,9 @@ box-sizing: border-box;
                             </a>
                         </ImageWrapper>
                         < InnerWrapper>
-                            <a href={project.LiveDemoLink}
-                                target="_blank" rel="noopener noreferrer">
+                            <StyledLink href={project.LiveDemoLink} target="_blank" rel="noopener noreferrer">
                                 <ProjectTitle>{project.title}</ProjectTitle>
-                            </a>
+                            </StyledLink>
                             <ProjectTextWrapper>
                                 <OnLightText>{project.description}</OnLightText>
                             </ProjectTextWrapper>
