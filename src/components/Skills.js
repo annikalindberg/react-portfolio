@@ -115,7 +115,7 @@ export const Skills = () => {
                     </OnLightText>
                 </SkillFrame>
                 <SkillFrame>
-                    <LightBlueBackgroundText>Upcomming</LightBlueBackgroundText>
+                    <LightBlueBackgroundText>Coming up</LightBlueBackgroundText>
                     <OnLightText>
                         <List>
                             <li>TypeScript</li>
