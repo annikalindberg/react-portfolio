@@ -27,7 +27,7 @@ export const ProjectImage = styled.img`
     object-fit: cover;
     margin: 1rem 0 1rem 0;
     border-radius: 10%;
-    width: 400px;
+   
 
 box-shadow: -1px 4px 53px 10px rgba(50, 38, 38, 0.5);
     @media screen and (min-width: 668px) {
@@ -36,7 +36,6 @@ box-shadow: -1px 4px 53px 10px rgba(50, 38, 38, 0.5);
     object-fit: contain;  
    
     @media screen and (min-width: 1024px) {
-
         
     }
     }
