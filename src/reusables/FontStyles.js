@@ -14,7 +14,7 @@ export const Name = styled.h1`
    margin-top: 1.7rem;
     @media screen and (min-width: 668px) {
     margin-top: 3rem;
-    font-size: 1%.9;
+    font-size: 1.9;
     }
     `;
 

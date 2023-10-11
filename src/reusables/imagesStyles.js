@@ -27,15 +27,14 @@ export const ProjectImage = styled.img`
     object-fit: cover;
     margin: 1rem 0 1rem 0;
     border-radius: 10%;
-   
 
 box-shadow: -1px 4px 53px 10px rgba(50, 38, 38, 0.5);
     @media screen and (min-width: 668px) {
-    width: 300px; 
-    
-    object-fit: contain;  
+    width: 190px; 
+    object-fit: cover;  
    
     @media screen and (min-width: 1024px) {
+        
         
     }
     }

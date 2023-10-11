@@ -8,11 +8,13 @@ import TechStack from './components/TechStack';
 import NewFooter from './components/Footer';
 import Skills from './components/Skills';
 import MyWords from 'components/MyWords';
+import { GlobalStyles } from './GlobalStyles';
 
 export const App = () => {
   return (
     <div>
       <ThemeProvider theme={theme}>
+        <GlobalStyles />
         <HeroSection />
         <TechStack />
         <ProjectContent />

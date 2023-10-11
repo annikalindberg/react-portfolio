@@ -5,7 +5,8 @@ import SatoshiBold from './fonts/Satoshi-Bold.woff';
 import SatoshiLight from './fonts/Satoshi-Light.woff';
 import SatoshiMedium from './fonts/Satoshi-Medium.woff';
 
-const GlobalStyles = createGlobalStyle`
+// use the font-family: 'Satoshi' to use the font in your styled component 
+export const GlobalStyles = createGlobalStyle`
     @font-face {
         font-family: 'Satoshi';
         src: url(${SatoshiRegular}) format('woff');
@@ -30,14 +31,19 @@ const GlobalStyles = createGlobalStyle`
         font-weight: 500;
         font-style: normal;
     }
-    @font-face {
-        font-family: 'Bevellier';
-        src: url(${BevellierMedium}) format('woff');
-        font-weight: 500;
-        font-style: normal;
-    }
-    
 
+
+body {
+    font-family: 'Satoshi', sans-serif;
+    color: ${({ theme }) => theme.colors.primaryDark};
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 `;
+
+
 
 export default GlobalStyles;
