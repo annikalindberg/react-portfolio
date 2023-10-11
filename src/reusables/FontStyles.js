@@ -48,7 +48,8 @@ export const SectionTitle = styled.p`
     font-weight: 700;
     font-size: 64px;
     line-height: 108px;
-    margin: 30px 0 35px 30px;
+    margin: 5px 0 35px 30px;
+    padding-top: 15px;
     
 
     :hover {

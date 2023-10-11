@@ -3,12 +3,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { OnLightText, SectionTitle, BlueBackgroundText, LightBlueBackgroundText, PinkBackgroundText } from '../reusables/FontStyles';
-import { SectionWrapper } from '../reusables/Wrappers';
+import { InnerWrapper, SectionWrapper } from '../reusables/Wrappers';
 
 
 const TechStack = () => {
     return (
       <SectionWrapper>
+        <InnerWrapper>
             <SectionTitle>Tech Stack</SectionTitle>
             <div>
           <OnLightText>
@@ -24,8 +25,9 @@ const TechStack = () => {
                     <PinkBackgroundText> Agile Methodologies, </PinkBackgroundText>
                     MongoDB, <LightBlueBackgroundText>Postman, Jest, CI/CD,   </LightBlueBackgroundText> Web Accessibly, Responsive Design, <BlueBackgroundText>Pair-Programming,</BlueBackgroundText> Code Reviews
                     , Team Collaboration,
-          </OnLightText>
-            </div>
+            </OnLightText>
+          </div>
+        </InnerWrapper>
       </SectionWrapper>
     );
 };

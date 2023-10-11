@@ -90,6 +90,7 @@ background-color: ${({ theme }) => theme.colors.heroBackground};
 box-sizing: border-box;
     @media screen and (min-width: 668px) {
   display: flex;
+  padding-bottom: ;
 
  
     }
@@ -97,17 +98,19 @@ box-sizing: border-box;
         margin-right: 10%;
         margin-left: 10%;
         
+        
     }
   
 `;
 
     const ImageWrapper = styled.div`
-     margin: 2rem 1rem 1rem 1rem;
+     margin: 2rem 2rem 1rem 2rem;
     @media screen and (min-width: 668px) {
-    display: flex;
-    flex-direction: column;
-    margin: 2rem 1rem 1rem 1rem;
-    max-width: 30%;
+      width: 300px;
+    height: 200px;
+    background-image: url(${ props => props.imgSrc});
+background-size: cover;
+background-position: center;
 
     :hover {
         transform: scale(1.1);
@@ -115,14 +118,13 @@ box-sizing: border-box;
         cursor: pointer;
 
     
-    }`
+    }`;
 
     const ProjectTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: left;
   text-align:left;
-
 
 `;
 
@@ -150,18 +152,19 @@ box-sizing: border-box;
  }
 `;
     const ButtonWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2rem 0.5rem 0.5rem 0.5rem;
+ 
 
-    margin: 2rem 0.5rem 0.5rem 0.5rem;
+  @media screen and (min-width: 668px) {
+    
+  }
+`;
 
-
-    @media screen and (min-width: 668px) {
-    flex-direction: row;
-        
-    }
-    `
     // selectdropdownmenu style
 
     const DropdownWrapper = styled.div`

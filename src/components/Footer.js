@@ -99,11 +99,12 @@ const ContactWrapper = styled.div`
  width: 100%;
     display: flex;
     flex-direction: column;
-   padding: 1rem;
+   max-width: 700px;
+   margin: 0 auto;
 
     @media screen and (min-width: 668px) {
+margin: 0 auto;
 
-        padding: 10px 20px 10px 20px;
     }
 `;
 
@@ -133,7 +134,7 @@ const NewFooter = () => {
 
                 </InfoWrapper>
             </ProfileAndInfoWrapper>
-            <PinkGradientWrapper>
+            {/*  <PinkGradientWrapper> */}
                 <ContactWrapper >
                     <PhoneLink href="tel:+46707533568">
                         <FaPhone /> {/* Phone Icon */}
@@ -145,7 +146,7 @@ const NewFooter = () => {
                     </EmailLink>
 
                 </ContactWrapper>
-            </PinkGradientWrapper>
+            {/*   </PinkGradientWrapper> */}
             <ContactLinks />
             <TopButton onClick={scrollToTop} id="top-button" title="Scroll to top">
                 <FaArrowUp />

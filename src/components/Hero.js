@@ -7,7 +7,7 @@ import { ProfileImage } from '../reusables/imagesStyles';
 import annikaprofile from '../assets/profil-square.jpg';
 import ContactLinks from '../reusables/ContactLinks';
 import SVGAnimation from './BakcgroundAnimation';
-import { ProfileImageWrapper, PinkGradientWrapper, ProfileAndInfoWrapper, PresentationWrapper, InfoWrapper } from '../reusables/Wrappers';
+import { ProfileImageWrapper, PinkGradientWrapper, ProfileAndInfoWrapper, PresentationWrapper, InfoWrapper, InnerWrapper } from '../reusables/Wrappers';
 
 
 /* const ProfileInfoParagraphTextStructure = styled.div`
@@ -25,13 +25,14 @@ import { ProfileImageWrapper, PinkGradientWrapper, ProfileAndInfoWrapper, Presen
 
 
 const HeroSection = () => {
-    return (
-        <PresentationWrapper>
+  return (
+    <PresentationWrapper>
 
-        {/* <ProfileInfoParagraphTextStructure> */}
+      <InnerWrapper>
           <ProfileAndInfoWrapper>
             <ProfileImageWrapper>
               <ProfileImage
+
                 src={annikaprofile} alt="Profile" />
             </ProfileImageWrapper>
 
@@ -49,9 +50,11 @@ const HeroSection = () => {
           </OnLightText>
           </PinkGradientWrapper>
                     <ContactLinks />
-        {/* </ProfileInfoParagraphTextStructure> */}
-        {/*         </BigScreenWrapper>
- */}        </PresentationWrapper>
+
+      </InnerWrapper>
+    </PresentationWrapper>
     );
+
 };
+
 export default HeroSection;

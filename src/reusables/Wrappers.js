@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const MainWrapper = styled.section`
+background-color: ${props => props.theme.colors.sectionsBackground};
+padding-bottom: 2rem;
+box-shadow: 0dvw 0.2dvh 0.5rem rgba(0, 0, 0, 0.5);
+`;
+
+
 export const SectionWrapper = styled.section`
   background: ${props => props.theme.colors.sectionsBackground};
   height: 100%;
@@ -12,13 +19,21 @@ export const SectionWrapper = styled.section`
     box-shadow: 0dvw 0.2dvh 0.5rem rgba(0, 0, 0, 0.5);
 
   @media screen and (min-width: 668px) {
-    padding: 0 10% 90px 10%;
+    
   }
 
   @media screen and (min-width: 1024px) {
-    padding: 0 25% 90px 25%;
+   
   }
   `;
+
+export const InnerWrapper = styled.div`
+   max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    `;
+
+
 
 export const PinkGradientWrapper = styled.div`
 background-color: ${props => props.theme.colors.sectionsBackground};
@@ -30,9 +45,8 @@ border: 1px solid rgba(249, 194, 249, 0.39);
 
 
  @media screen and (min-width: 668px) {
-  padding: 4rem 5rem;
+  padding: 4rem 2rem;
   box-shadow: inset -4px -4px 62px 27px rgba(226, 12, 238, 0.2);
-  margin: 1rem;
 
   }
   `;
@@ -76,11 +90,12 @@ export const InfoWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   margin-bottom: 1rem;
  
 
   @media screen and (min-width: 668px) {
-  
+  align-items: flex-start;
   }
   `;
 
@@ -91,6 +106,9 @@ export const ProfileAndInfoWrapper = styled.div`
 
   @media screen and (min-width: 668px) {
   flex-direction: row;
-  justify-content: center
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+
   }
   `;

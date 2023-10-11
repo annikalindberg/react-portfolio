@@ -11,6 +11,11 @@ export const Section = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+@media screen and (min-width: 668px) {
+      padding: 0 0px 0px 30px;
+    
+}
 `;
 
 export const List = styled.ul`

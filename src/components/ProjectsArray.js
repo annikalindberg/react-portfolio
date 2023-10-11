@@ -9,7 +9,7 @@ const projects = [
     },
     {
         title: "Rabbit Hole Maze-game",
-        description: "his project is a labyrinth game inspired by the enchanting world of Alice in Wonderland. It allowed me to explore Redux in depth, focusing on concepts such as async actions and reducers. Working in pairs, we got to challenge ourselves in effectively integrate APIs with Redux, utilizing thunks and structuring the Redux store to suit our data.The game also features reusable components and the capability to send JSON in request bodies, showcasing the practicality and versatility of the project.",
+        description: "This project is a labyrinth game inspired by the enchanting world of Alice in Wonderland. It allowed me to explore Redux in depth, focusing on concepts such as async actions and reducers. Working in pairs, we got to challenge ourselves in effectively integrate APIs with Redux, utilizing thunks and structuring the Redux store to suit our data.The game also features reusable components and the capability to send JSON in request bodies, showcasing the practicality and versatility of the project.",
         image: "/images/rabbithole.jpg",
         stack: ["React JS", "Redux", "API", "React Styled Components", "Lottie animation library", "JSX"],
         githubLink: "https://github.com/annikalindberg/project-labyrinth",
@@ -58,7 +58,7 @@ const projects = [
     {
         title: 'Weather app',
         image: "images/weather-app.png",
-        description: 'air programming project where me and Frida built a weather-app in vanilla Javascript by following a given design. We made a simple weather dashboard and by fetching external data from a weather API that shows todays weather, temperature and presents a 5-day forecast',
+        description: 'Pair programming project where me and Frida built a weather-app in vanilla Javascript by following a given design. We made a simple weather dashboard and by fetching external data from a weather API that shows todays weather, temperature and presents a 5-day forecast',
         stack: ['HTML', 'CSS', 'JavaScript', 'Pair-programming'],
         githubLink: 'https://github.com/annikalindberg/project-weather-app',
         LiveDemoLink: 'https://rainbow-rolypoly-c2ce71.netlify.app/'
