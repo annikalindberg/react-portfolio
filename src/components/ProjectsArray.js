@@ -37,7 +37,7 @@ const projects = [
         description: 'For this project we worked in a team of four to create a short quiz using React and Redux. We learnd how to use selectors to access redux state and to use dispatch to trigger redux actions.',
         stack: ['HTML', 'CSS', 'JavaScript', 'React', 'JSX', 'Redux'],
         githubLink: 'https://github.com/annikalindberg/project-redux-space-quiz',
-        LiveDemoLink: 'https://space-quiz-by-annikabridgetfionafrida.netlify.app/'
+        LiveDemoLink: 'https://annika-spacequiz.netlify.app/'
     },
     {
         title: "Movie releases",
