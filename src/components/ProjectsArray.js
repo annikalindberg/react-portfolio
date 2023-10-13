@@ -2,7 +2,7 @@ const projects = [
     {
         title: "Wordgame Swedish Weather",
         description: " I initiated this project as an assignment from my mentor, who requested a Hangman game implementation.To infuse creativity, I tweeked the UI changing the theme to make it suitable for kids to practice Swedish and/ or English words.This way, players with basic knowledge of these languages can enjoy the game.",
-        image: "images/hangman-game.png",
+        image: "images/swedishwordsproject.png",
         stack: ["React JS", "Redux", "React Styled Components", "JSX"],
         githubLink: "https://github.com/annikalindberg/Hangman-game",
         LiveDemoLink: "https://swedishweatherwords.netlify.app/"
@@ -33,7 +33,7 @@ const projects = [
     },
     {
         title: "Space-Quiz Project",
-        image: "images/redux-quiz.png",
+        image: "images/reduxquiz.png",
         description: 'For this project we worked in a team of four to create a short quiz using React and Redux. We learnd how to use selectors to access redux state and to use dispatch to trigger redux actions.',
         stack: ['HTML', 'CSS', 'JavaScript', 'React', 'JSX', 'Redux'],
         githubLink: 'https://github.com/annikalindberg/project-redux-space-quiz',
@@ -57,7 +57,7 @@ const projects = [
     },
     {
         title: 'Weather app',
-        image: "images/weather-app.png",
+        image: "images/weatherapp.png",
         description: 'Pair programming project where me and Frida built a weather-app in vanilla Javascript by following a given design. We made a simple weather dashboard and by fetching external data from a weather API that shows todays weather, temperature and presents a 5-day forecast',
         stack: ['HTML', 'CSS', 'JavaScript', 'Pair-programming'],
         githubLink: 'https://github.com/annikalindberg/project-weather-app',
