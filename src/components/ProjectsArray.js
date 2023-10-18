@@ -1,5 +1,15 @@
 const projects = [
     {
+        title: "My Code Diary",
+        description: "Built a Diary Entry List app using React and Redux for a coding challenge. The app allows users to view, sort, and paginate diary entries, and features a professional UI thanks to Material-UI and Styled-components. Designed for scalability and extensibility, it's also pre-configured for API integration.",
+        image: "images/codeDiary.png",
+        stack: ["React JS", "Redux", "React Styled Components", "Material UI", "JSX"],
+        githubLink: "https://github.com/annikalindberg/diary-app",
+        LiveDemoLink: "https://annikasdiary.netlify.app/"
+
+    },
+
+    {
         title: "Wordgame Swedish Weather",
         description: " I initiated this project as an assignment from my mentor, who requested a Hangman game implementation.To infuse creativity, I tweeked the UI changing the theme to make it suitable for kids to practice Swedish and/ or English words.This way, players with basic knowledge of these languages can enjoy the game.",
         image: "images/swedishwordsproject.png",
