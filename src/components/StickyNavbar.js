@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { useRef } from 'react';
 import { FaHome, FaCode, FaProjectDiagram, FaComment, FaHeadset, FaLaptopCode } from 'react-icons/fa';
 
 // Your pastel colors
@@ -9,7 +10,7 @@ const colors = {
     pastelPurple: "#988798a6"
 };
 
-const NavbarContainer = styled.div`
+const NavbarContainer = styled.nav`
   position: fixed;
   top: 0; // <- Stick to the top of the screen 
   margin: 0px 0 20px 0px;
@@ -98,23 +99,43 @@ display: none;
 }
 `;
 
+const KeyboardAwareNavItem = ({ section, onClick, isActive, isMenuOpen }) => {
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            onClick(section);
+        }
+    };
 
-
+    return (
+        <NavItem
+            onClick={() => onClick(section)}
+            onKeyPress={handleKeyPress}
+            tabIndex="0"
+            aria-expanded={isActive ? 'true' : 'false'}
+            style={{ color: isActive ? colors.pastelPurple : '' }}
+        >
+            {section === 'home' && <FaHome style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
+            {section === 'tech-stack' && <FaCode style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
+            {section === 'projects' && <FaProjectDiagram style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
+            {section === 'my-words' && <FaComment style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
+            {section === 'skills' && <FaLaptopCode style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
+            {section === 'time-to-talk' && <FaHeadset style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
+            {section}
+        </NavItem>
+    );
+};
 
 const StickyNavbar = ({ sections }) => {
     const [activeSection, setActiveSection] = useState('');
     const [isMenuOpen, setMenuOpen] = useState(false);
+    const navRef = useRef(null);
 
     const handleScroll = () => {
         let found = false;
 
         for (const section of sections) {
             const element = document.getElementById(section);
-
-            if (!element) {
-                continue;
-            }
-
+            if (!element) continue;
             const rect = element.getBoundingClientRect();
 
             if (rect.top <= 0 && rect.bottom >= 0) {
@@ -129,49 +150,53 @@ const StickyNavbar = ({ sections }) => {
         }
     };
 
+    const handleClickOutside = (event) => {
+        if (navRef.current && !navRef.current.contains(event.target)) {
+            setMenuOpen(false);
+        }
+    };
+
     const handleClick = (section) => {
         const element = document.getElementById(section);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
+        setMenuOpen(false);
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('mousedown', handleClickOutside);
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
 
+
     return (
-        <NavbarContainer>
+        <NavbarContainer ref={navRef}>
             <HamburgerIcon onClick={() => setMenuOpen(!isMenuOpen)}>
                 <div></div>
                 <div></div>
                 <div></div>
             </HamburgerIcon>
+
             <NavItems isMenuOpen={isMenuOpen}>
                 {sections.map((section) => (
-                    <NavItem
+                    <KeyboardAwareNavItem
                         key={section}
-                        onClick={() => {
-                            handleClick(section);
-                            setMenuOpen(false);  // Close the menu when a section is clicked
-                        }}
-                        style={{ color: activeSection === section ? colors.pastelPurple : '' }}
-                    >
-                        {section === 'home' && <FaHome style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
-                        {section === 'tech-stack' && <FaCode style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
-                        {section === 'projects' && <FaProjectDiagram style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
-                        {section === 'my-words' && <FaComment style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
-                        {section === 'skills' && <FaLaptopCode style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
-                        {section === 'time-to-talk' && <FaHeadset style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
-                        {section}
-                    </NavItem>
+                        section={section}
+                        onClick={handleClick}
+                        isActive={activeSection === section}
+                        isMenuOpen={isMenuOpen}
+                    />
                 ))}
             </NavItems>
         </NavbarContainer>
     );
 };
+
 
 export default StickyNavbar;

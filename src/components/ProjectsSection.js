@@ -16,8 +16,6 @@ const ProjectContent = () => {
     const [selectedStack, setSelectedStack] = useState('all');
     const options = [
         { value: 'all', label: 'All projects' },
-        { value: 'HTML', label: 'HTML' },
-        { value: 'CSS', label: 'CSS' },
         { value: 'JavaScript', label: 'JavaScript' },
         { value: 'React', label: 'React' },
         { value: 'JSX', label: 'JSX' },
@@ -100,7 +98,7 @@ box-sizing: border-box;
         margin-right: 10%;
         margin-left: 10%;
         
-        
+    
     }
   
 `;
@@ -128,6 +126,7 @@ background-position: center;
   flex-direction: column;
   justify-content: left;
   text-align:left;
+  margin-bottom: 20px;
 
 `;
 
@@ -223,6 +222,7 @@ background-position: center;
                     options={options}
                     onChange={handleChange}
                     placeholder="Select a stack"
+                    htmlFor="Select a stack" 
                 />
             </DropdownWrapper>
             {/* <StyledFontAwesomeIcon icon={faArrowDown} /> */}

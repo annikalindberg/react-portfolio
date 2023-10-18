@@ -44,7 +44,7 @@ const projects = [
     {
         title: "Space-Quiz Project",
         image: "images/reduxquiz.png",
-        description: 'For this project we worked in a team of four to create a short quiz using React and Redux. We learnd how to use selectors to access redux state and to use dispatch to trigger redux actions.',
+        description: 'For this project we worked in a team of four to create a short quiz using React and Redux. We learned how to use selectors to access redux state and to use dispatch to trigger redux actions.',
         stack: ['HTML', 'CSS', 'JavaScript', 'React', 'JSX', 'Redux'],
         githubLink: 'https://github.com/annikalindberg/project-redux-space-quiz',
         LiveDemoLink: 'https://annika-spacequiz.netlify.app/'
@@ -60,7 +60,7 @@ const projects = [
     {
         title: 'Music releases',
         image: "images/musicreleases.png",
-        description: 'Pair programing project in React where me and Anna built a page which shows new album and single releases fetching API data from Spotify. In this project we got to practice working with useState hooks and got a quite good understanding of state manegement in general within React.',
+        description: 'Pair programming project in React where me and Anna built a page which shows new album and single releases fetching API data from Spotify. In this project we got to practice working with useState hooks and got a quite good understanding of state management in general within React.',
         stack: ['HTML', 'CSS', 'JavaScript', 'React', 'JSX', 'Pair-programming'],
         githubLink: 'https://github.com/chas-academy/project-music-releases',
         LiveDemoLink: 'https://anna-annikas.netlify.app/'

@@ -33,7 +33,7 @@ export const Section = styled.section`
   `;
 
 const DateParagraph = styled.p`
-color: #EB5577;
+color: #513b3b; 
 font-size: 1.25;
 font-weight: 400;
 `;

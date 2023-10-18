@@ -108,7 +108,7 @@ export const Skills = () => {
                     <PinkBackgroundText>More</PinkBackgroundText>
                     <OnLightText>
                         <List>
-                            <li>Agile Methdology</li>
+                            <li>Agile Methodology</li>
                             <li>Pair-Programming</li>
                             <li>Team Collaboration</li>
                             <li>CI/CD</li>

@@ -59,8 +59,8 @@ export const SectionTitle = styled.p`
     font-weight: 700;
     font-size: 64px;
     margin: 5px 0 35px 30px;
-    padding-top: 15px;
-    line-height: 108px;
+    line-height: 70px;
+    padding-top: 40px;
 
     :hover {
       transform: scale(1.1);
@@ -72,7 +72,9 @@ export const SectionTitle = styled.p`
       display: flex;
       justify-content: center;
       margin: 5px 0 10px 0;
-      font-size: 80px;
+      font-size: 60px;
+          padding-top: 20px;
+
     }
   `}
 `;
