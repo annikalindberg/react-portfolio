@@ -43,11 +43,12 @@ const HeroSection = () => {
             </InfoWrapper>
           </ProfileAndInfoWrapper>
           <PinkGradientWrapper>
-          <OnLightText >
-                            As a frontend developer, I bring a broad and user-oriented perspective, as well as a burning passion for code. Before switching careers to tech, I worked within social movement building and non-profit organizations, which helped me
-                            develop excellent coordination, teamwork, and communication skills.
-                            Now, I'm looking to join a team where I can continue to leverage my skills and grow my expertise in coding, working my way towards contributing to the creation of magical user experiences.
+          <OnLightText style={{ paddingBottom: '20px' }} >
+            I'm a results-driven Frontend Developer with a competitive mindset and a team-focused attitude. I blend a deep-rooted passion for coding with a diverse background in community building and the non-profit sector. My prior experiences have equipped me with the skills to deliver high performance while utilizing minimal resources. I excel in crafting accessible communication strategies that adapt to a variety of target audiences.
           </OnLightText>
+          <OnLightText >
+            n me, you'll discover a dedicated team player endowed with a strong sense of responsibility and an insatiable appetite for learning. I am in search of a role where I can not only elevate my development skills but also contribute meaningfully to a team that is driving impactful change.
+          </OnLightText> 
           </PinkGradientWrapper>
                     <ContactLinks />
 
