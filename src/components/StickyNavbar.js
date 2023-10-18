@@ -70,17 +70,27 @@ const NavItem = styled.li`
 const HamburgerIcon = styled.div`
 display: flex;
 flex-direction: column;
-gap: 4px;
+gap: 5px;
 margin: 1rem;
 cursor: pointer;
 align-items: flex-start;
   z-index: 1001;  // To make sure it appears above the menu
 
 div {
-    width: 30px;
-    height: 4px;
+    width: 34px; 
+    height: 6px;
     background-color: black;
+    border-radius: 5px;
    
+}
+@media screen and (min-width: 682px ) {
+    gap: 7px;
+
+    div {
+    width: 40px;
+    height: 7px;
+    }
+    
 }
 
 @media screen and (min-width: 969px) {
@@ -150,12 +160,12 @@ const StickyNavbar = ({ sections }) => {
                         }}
                         style={{ color: activeSection === section ? colors.pastelPurple : '' }}
                     >
-                        {section === 'home' && <FaHome />}
-                        {section === 'tech-stack' && <FaCode />}
-                        {section === 'projects' && <FaProjectDiagram />}
-                        {section === 'my-words' && <FaComment />}
-                        {section === 'skills' && <FaLaptopCode />}
-                        {section === 'time-to-talk' && <FaHeadset />}
+                        {section === 'home' && <FaHome style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
+                        {section === 'tech-stack' && <FaCode style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
+                        {section === 'projects' && <FaProjectDiagram style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
+                        {section === 'my-words' && <FaComment style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
+                        {section === 'skills' && <FaLaptopCode style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
+                        {section === 'time-to-talk' && <FaHeadset style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
                         {section}
                     </NavItem>
                 ))}

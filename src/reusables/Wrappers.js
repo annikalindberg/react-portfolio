@@ -57,7 +57,7 @@ margin-top: 1rem;
 margin-bottom: 1rem;
 
   @media screen and (min-width: 668px) {
-  margin: 20px 0 30px 0;
+  margin: 80px 0 30px 0;
   }
   `
 export const PresentationWrapper = styled.section`
@@ -106,7 +106,7 @@ export const ProfileAndInfoWrapper = styled.div`
 
   @media screen and (min-width: 668px) {
   flex-direction: row;
-  justify-content: space-between;
+  
   max-width: 800px;
   margin: 0 auto;
 
