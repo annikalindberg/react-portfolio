@@ -120,7 +120,7 @@ const NewFooter = () => {
     };
 
     return (
-        <FooterWrapper>
+        <FooterWrapper id="time-to-talk">
             <SectionTitle> Time to talk! </SectionTitle>
             {/* <ProfileInfoParagraphTextStructure> */}
             <ProfileAndInfoWrapper>

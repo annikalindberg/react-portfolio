@@ -8,7 +8,7 @@ import { InnerWrapper, SectionWrapper } from '../reusables/Wrappers';
 
 const TechStack = () => {
     return (
-      <SectionWrapper>
+      <SectionWrapper id='tech-stack'>
         <InnerWrapper>
             <SectionTitle>Tech Stack</SectionTitle>
             <div>

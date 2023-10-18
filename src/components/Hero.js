@@ -26,7 +26,7 @@ import { ProfileImageWrapper, PinkGradientWrapper, ProfileAndInfoWrapper, Presen
 
 const HeroSection = () => {
   return (
-    <PresentationWrapper>
+    <PresentationWrapper id="home">
 
       <InnerWrapper>
           <ProfileAndInfoWrapper>

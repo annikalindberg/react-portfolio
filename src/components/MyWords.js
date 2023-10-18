@@ -49,7 +49,7 @@ margin: 1rem 0 0 0;
 const MyWords = () => {
     return (
 
-        <Section>
+        <Section id='my-words'>
             <InnerWrapper>
                 <SectionTitle>My Words</SectionTitle>
 

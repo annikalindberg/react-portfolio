@@ -84,16 +84,17 @@ const ProjectContent = () => {
     );
 
 
+
     const ProjectWrapper = styled.li`
 background-color: ${({ theme }) => theme.colors.heroBackground};
  box-shadow: 0dvw 0.2dvh 0.5rem rgba(0, 0, 0, 0.5); 
 box-sizing: border-box;
+
     @media screen and (min-width: 668px) {
   display: flex;
-  padding-bottom: ;
 
- 
     }
+
     @media screen and (min-width: 1024px) {
         margin-right: 10%;
         margin-left: 10%;
@@ -105,6 +106,7 @@ box-sizing: border-box;
 
     const ImageWrapper = styled.div`
      margin: 2rem 2rem 1rem 2rem;
+
     @media screen and (min-width: 668px) {
       width: 300px;
     height: 200px;
@@ -112,13 +114,14 @@ box-sizing: border-box;
 background-size: cover;
 background-position: center;
 
-    :hover {
+    :hover 
         transform: scale(1.1);
         transition: transform 0.5s ease-in-out;
         cursor: pointer;
 
     
     }`;
+
 
     const ProjectTextWrapper = styled.div`
   display: flex;
@@ -192,7 +195,7 @@ background-position: center;
 `;
 
     return (
-        <main
+        <main id='projects'
             style={{ backgroundColor: theme.colors.sectionsBackground }
             }
         >
@@ -252,3 +255,4 @@ background-position: center;
 }
 
 export default ProjectContent;
+

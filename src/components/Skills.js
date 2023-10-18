@@ -62,7 +62,8 @@ const BackgroundText = styled.div.attrs(props => ({
 
 export const Skills = () => {
     return (
-        <Section aria-labelledby="skills-section">
+        <Section id="skills"
+            aria-labelledby="skills-section">
             <SectionTitle id="skills-section">Skills</SectionTitle>
             <SkillFrameStructure>
                 <SkillFrame aria-label="Code Skills">
