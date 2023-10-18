@@ -4,12 +4,14 @@ import styled, { css } from 'styled-components';
 const BaseTextStyle = css`
   line-height: 28.71px;
   font-weight: 400;
+  font-family: 'Satoshi', sans-serif;
 `;
 
 // Base Title Style
 const BaseTitleStyle = css`
   font-weight: 900;
   line-height: 43.2px;
+  font-family: 'Open Sans', sans-serif;
 `;
 
 export const Name = styled.h1`
@@ -19,6 +21,7 @@ export const Name = styled.h1`
     font-size: 1.6rem;
     margin-top: 1.7rem;
     line-height: 37.8px;
+   
 
     @media screen and (min-width: 668px) {
       margin-top: 3rem;
@@ -46,6 +49,7 @@ export const PlusTextStyling = styled.h4`
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 32.4px;
+    font-family: 'Open Sans', sans-serif;
   `}
 `;
 
@@ -116,6 +120,6 @@ export const OnLightText = styled.p`
     ${BaseTextStyle};
     color: ${props => props.theme.colors.primaryDark};
     font-size: 20px;
-    font-family: 'Satoshi', sans-serif;
+
   `}
 `;

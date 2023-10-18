@@ -7,7 +7,7 @@ export const ProfileImage = styled.img`
     border-radius: 50%;
     width: 10rem; 
     object-fit: cover;
-    border: solid black 1px;
+   
    
 
     @media screen and (min-width: 668px) {
