@@ -9,6 +9,7 @@ import Select from 'react-select';
 import theme from 'theme';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { FaGithub, FaArrowRight } from 'react-icons/fa';
 
 
 const ProjectContent = () => {
@@ -119,7 +120,6 @@ background-position: center;
         transition: transform 0.5s ease-in-out;
         cursor: pointer;
 
-    
     }`;
 
 
@@ -200,6 +200,23 @@ background-position: center;
             }
         >
             <SectionTitle>Featured Projects</SectionTitle>
+            <InnerWrapper>
+                <OnLightText>Here I listed some of my projects. Head over to my GitHub to check out more of my work
+                    <StyledLink
+                        label="GitHub" //
+                        title="GitHub"
+                        href="https://github.com/annikalindberg"
+                        target="_blank" rel="noopener noreferrer">
+
+
+                        <FaGithub
+                            style={{ marginLeft: '10px' }}>
+                        </FaGithub>
+
+
+                    </StyledLink>
+                </OnLightText>
+            </InnerWrapper>
             <DropdownWrapper>
                 <Select
                     styles={customStyles}
