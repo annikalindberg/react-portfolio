@@ -19,7 +19,7 @@ const ProjectContent = () => {
         { value: 'JavaScript', label: 'JavaScript' },
         { value: 'React', label: 'React' },
         { value: 'JSX', label: 'JSX' },
-        { value: 'Styled-components', label: 'Styled-components' },
+        { value: 'Styled Components', label: 'Styled Components' },
         { value: 'Material UI', label: 'Material UI' },
         { value: 'API', label: 'API' },
         { value: 'Express', label: 'Express' },
