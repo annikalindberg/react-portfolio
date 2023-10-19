@@ -1,7 +1,7 @@
 const projects = [
     {
         title: "My Code Diary",
-        description: "This project was part of a code challenge where I was instructed to build a diary app. The app allows users to view, sort, and paginate diary entries, and features a professional UI thanks to Material-UI and Styled-components. Designed for scalability and extensibility, it's also pre-configured for API integration.",
+        description: "This project was part of a code challenge where I was instructed to build a diary app. The app allows users to view, sort, and paginate diary entries, and features a professional UI thanks to Material-UI and Styled-components. Designed for scalability and extensibility, it's also pre-configured for API integration. Moving forward, I think it would be really fun to also integrate a server-side rendering, by building a backend API to store the data. Since I am a huge fan of Bullet Journaling, I would like to make integrations with local media like images, screenshots etc. And add icons to build on the filtering feature to be more advanced.",
         image: "images/codeDiary.png",
         stack: ["React JS", "Redux", "React Styled Components", "Material UI", "JSX"],
         githubLink: "https://github.com/annikalindberg/diary-app",
@@ -11,7 +11,7 @@ const projects = [
 
     {
         title: "Wordgame Swedish Weather",
-        description: " I initiated this project as an assignment from my mentor, who requested a Hangman game implementation.To infuse creativity, I tweeked the UI changing the theme to make it suitable for kids to practice Swedish and/ or English words.This way, players with basic knowledge of these languages can enjoy the game.",
+        description: "I initiated this project as an assignment from one of my mentors, who requested a Hangman game implementation. To infuse creativity, I tweaked the UI changing the theme to make it suitable for kids to practice Swedish and/ or English words. This way, players with basic knowledge of these languages can enjoy the game. Ive continued this challenge after feedback and iterations together with my mentors. Since deploying the app I've made some refactoring of the code.I´ve also changed the rendering method from using mock- data to fetching from a real API.Implementing the changes will require some overall theme changes and tweaks to match the logics of the game theme.",
         image: "images/swedishwordsproject.png",
         stack: ["React JS", "Redux", "React Styled Components", "JSX"],
         githubLink: "https://github.com/annikalindberg/Hangman-game",
