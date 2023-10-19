@@ -52,7 +52,7 @@ const projects = [
     {
         title: "Movie releases",
         image: "images/movies.png",
-        description: 'Team project where we were introduced to React Routes building our first multi-page React application. Here we also continued practicing fetching data, in this project from a movie database. We learned several new hooks, including useNavigate and useParams. We also learned how to incorporate an .env file to store environmental variables. We experimented with the .env file and environmental variables to avoid including our API key directly in the code.',
+        description: 'In this collaborative project, we advanced our React development skills by creating a multi-page application utilizing React Router for client-side navigation. We implemented asynchronous data fetching techniques to retrieve content from an external movie database API. Key React hooks such as useNavigate and useParams were employed to enhance navigation and capture route parameters. For secure and efficient configuration management, we incorporated environment variables stored in a .env file.This allowed us to abstract sensitive information, such as API keys, away from the codebase, enhancing security and maintainability.',
         stack: ['HTML', 'CSS', 'JavaScript', 'React', 'JSX', 'Redux'],
         githubLink: 'https://github.com/annikalindberg/project-movies',
         LiveDemoLink: 'https://cosmic-daffodil-7c032f.netlify.app/'
