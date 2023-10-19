@@ -5,6 +5,12 @@ const BaseTextStyle = css`
   line-height: 28.71px;
   font-weight: 400;
   font-family: 'Satoshi', sans-serif;
+
+  @media screen and (min-width: 668px) {
+    line-height: 32.4px;
+    font-size: 1.2rem;
+    
+  }
 `;
 
 // Base Title Style
@@ -12,6 +18,11 @@ const BaseTitleStyle = css`
   font-weight: 900;
   line-height: 43.2px;
   font-family: 'Open Sans', sans-serif;
+
+    @media screen and (min-width: 668px) {
+    
+    font-size: 1.6rem;
+    }
 `;
 
 export const Name = styled.h1`

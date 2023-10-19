@@ -199,7 +199,10 @@ background-position: center;
             }
         >
             <SectionTitle>Featured Projects</SectionTitle>
-            <InnerWrapper>
+            <InnerWrapper
+                style={{
+                    textAlign: 'center'
+                }}>
                 <OnLightText>Here I listed some of my projects. Head over to my GitHub to check out more of my work
                     <StyledLink
                         label="GitHub" //
@@ -209,7 +212,7 @@ background-position: center;
 
 
                         <FaGithub
-                            style={{ marginLeft: '7rem' }}>
+                            style={{ margin: '0.7rem 0rem 0rem 1rem' }}>
                         </FaGithub>
 
 
