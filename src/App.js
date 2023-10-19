@@ -16,8 +16,8 @@ export const App = () => {
   return (
     <div>
       <Helmet>
-        <title>Your Portfolio Title</title>
-        <meta property="og:title" content="Annika Lindberg Frontend Developer | React.js Portfolio" />
+        <title>Annika Lindberg Frontend Developer Portfolio</title>
+        <meta property="og:title" content="Annika Lindberg Frontend Developer Portfolio" />
         <meta property="og:description" content="Showcasing my frontend development skills, projects, and technologies. Specialized in Web Applications using Javascript, React.js, Node.js, Express.js, MongoDB, responsive design, UX/UI, Webb Accessability" />
         <meta property="og:url" content="https://annikalindberg.netlify.app/" />
         <meta property="og:type" content="website" />
