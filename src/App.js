@@ -23,7 +23,7 @@ export const App = () => {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Annika Lindberg Portfolio" />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:image" content={`${process.env.PUBLIC_URL}/images/og-image-portfolio.png`} />
+        <meta property="og:image" content={`${process.env.PUBLIC_URL}/images/og-image.png`} />
       </Helmet>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
