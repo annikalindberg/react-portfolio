@@ -19,9 +19,11 @@ export const App = () => {
         <title>Your Portfolio Title</title>
         <meta property="og:title" content="Annika Lindberg Frontend Developer | React.js Portfolio" />
         <meta property="og:description" content="Showcasing my frontend development skills, projects, and technologies. Specialized in Web Applications using Javascript, React.js, Node.js, Express.js, MongoDB, responsive design, UX/UI, Webb Accessability" />
-        <meta property="og:title" content="Annika Lindberg Frontend Developer" />
-        <meta property="og:description" content="Portfolio showcasing my skills and projects as a frontend developer" />
-        <meta property="og:image" content="URL_to_default_og_image.jpg" />
+        <meta property="og:url" content="https://annikalindberg.netlify.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Annika Lindberg Portfolio" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content={`${process.env.PUBLIC_URL}/images/og-image-portfolio.png`} />
       </Helmet>
       <ThemeProvider theme={theme}>
         <GlobalStyles />

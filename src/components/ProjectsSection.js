@@ -209,7 +209,7 @@ background-position: center;
 
 
                         <FaGithub
-                            style={{ marginLeft: '10px' }}>
+                            style={{ marginLeft: '7rem' }}>
                         </FaGithub>
 
 
