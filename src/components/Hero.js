@@ -44,10 +44,11 @@ const HeroSection = () => {
           </ProfileAndInfoWrapper>
           <PinkGradientWrapper>
           <OnLightText style={{ paddingBottom: '20px' }} >
-            I'm a results-driven Frontend Developer with a competitive mindset and a team-focused attitude. I blend a deep-rooted passion for coding with a diverse background in community building and the non-profit sector. My prior experiences have equipped me with the skills to deliver high performance while utilizing minimal resources. I excel in crafting accessible communication strategies that adapt to a variety of target audiences.
+            I'm a results-driven Frontend Developer with a competitive mindset and a team-focused attitude. I currently built most my web applications in the MERN stack, in which Im fairly comfortable, but Im also seeking to evolve my DevOps skills containerizing with Docker and Kubernetes. </OnLightText>
+          <OnLightText style={{ paddingBottom: '20px' }} > Before transitioning to a career in frontend development, I spent over a decade working in the non-profit sector. The invaluable skills I acquired during that time include delivering high performance with limited resources, mastering effective communication techniques, and adapting my messaging to be accessible to diverse target audiences.
           </OnLightText>
           <OnLightText >
-            n me, you'll discover a dedicated team player endowed with a strong sense of responsibility and an insatiable appetite for learning. I am in search of a role where I can not only elevate my development skills but also contribute meaningfully to a team that is driving impactful change.
+            In me, you'll find a dedicated and adaptive team player with a strong sense of responsibility, a deep-rooted passion for coding and a never ending appetite for learning. Im looking for a role that will nurture and evolve my skills and where I contribute with a positive attitude and a growth mindset.
           </OnLightText> 
           </PinkGradientWrapper>
                     <ContactLinks />
