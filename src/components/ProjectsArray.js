@@ -36,7 +36,7 @@ const projects = [
     {
         title: "To Do App",
         image: "images/to-do-app.png",
-        description: 'This is a To-Do-App build in React/Redux where I got to practice making my own reducers and slices. I used vanilla css for this project and focused on learning how to manage reducers and played around with slicing up the code in different ways.',
+        description: 'This is a To-Do-App where I leveraged React and Redux to gain hands-on experience in state management. I implemented custom reducers and utilized the createSlice-method in Redux Toolkit, to manage application state in a modular fashion. While the frontend styling was achieved using vanilla CSS, the primary focus was on mastering state management through Redux.This involved experimenting with different code organization strategies, including slicing the codebase for optimized maintainability and readability.',
         stack: ['HTML', 'CSS', 'JavaScript', 'React', 'JSX', 'Redux'],
         githubLink: 'https://github.com/annikalindberg/project-todos',
         LiveDemoLink: 'https://animated-paletas-c14d00.netlify.app/'
