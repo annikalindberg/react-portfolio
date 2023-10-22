@@ -10,12 +10,16 @@ import theme from 'theme';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { FaGithub, FaArrowRight } from 'react-icons/fa';
-
+import Accordion from './Accordation';
 
 const ProjectContent = () => {
     const [selectedStack, setSelectedStack] = useState('all');
     const options = [
         { value: 'all', label: 'All projects' },
+        { value: 'Axios', label: 'Axios' },
+        { value: 'React Router', label: 'React Router' },
+        { value: 'React Hooks', label: 'React Hooks' },
+        { value: 'Postman', label: 'Postman' },
         { value: 'JavaScript', label: 'JavaScript' },
         { value: 'React', label: 'React' },
         { value: 'JSX', label: 'JSX' },
@@ -29,7 +33,16 @@ const ProjectContent = () => {
         { value: 'Node.js', label: 'Node.js' },
         { value: 'Redux', label: 'Redux' },
         { value: 'Pair-programming', label: 'Pair-programming' },
+        { value: 'Backend', label: 'Backen' },
     ];
+
+    // state variable for accordion
+    const [openProject, setOpenProject] = useState(null);
+
+    const toggleAccordion = (index) => {
+        setOpenProject(openProject === index ? null : index);
+
+    };
 
     const customStyles = {
         placeholder: (base) => ({
@@ -116,10 +129,11 @@ box-sizing: border-box;
 
     @media screen and (min-width: 668px) {
       width: 300px;
-    height: 200px;
+    height: auto;
     background-image: url(${ props => props.imgSrc});
 background-size: cover;
 background-position: center;
+
 
     :hover 
         transform: scale(1.1);
@@ -129,14 +143,6 @@ background-position: center;
     }`;
 
 
-    const ProjectTextWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  text-align:left;
-  margin-bottom: 20px;
-
-`;
 
     const InnerWrapper = styled.div`
     display: flex;
@@ -200,6 +206,26 @@ background-position: center;
 
   }
 `;
+    const StyledFigure = styled.figure`
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: 668px) {
+    display: inline-block;
+  }
+`;
+
+    const ImageCaption = styled.figcaption`
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.9em;
+  color: grey;
+`;
+
+
 
     return (
         <main id='projects'
@@ -243,19 +269,24 @@ background-position: center;
                     <ProjectWrapper key={index}>
 
                         <ImageWrapper>
-                            <a href={project.LiveDemoLink}
-                                target="_blank" rel="noopener noreferrer">
-
-                            <ProjectImage src={project.image} alt={project.title} />
-                            </a>
+                            <StyledFigure>
+                                <a href={project.LiveDemoLink} target="_blank" rel="noopener noreferrer">
+                                    <ProjectImage src={project.image} alt={project.title} />
+                                </a>
+                                <ImageCaption>{project.imageCaption}</ImageCaption>
+                            </StyledFigure>
                         </ImageWrapper>
-                        < InnerWrapper>
+                        <InnerWrapper>
                             <StyledLink href={project.LiveDemoLink} target="_blank" rel="noopener noreferrer">
                                 <ProjectTitle>{project.title}</ProjectTitle>
                             </StyledLink>
-                            <ProjectTextWrapper>
-                                <OnLightText>{project.description}</OnLightText>
-                            </ProjectTextWrapper>
+
+                            <Accordion
+                                index={index}
+                                openIndex={openProject}
+                                toggleAccordion={toggleAccordion}
+                                description={project.description}
+                            />
                             <ul>
                                 {project.stack.map((lang, i) => (
                                     <TechTag key={i}>{lang}</TechTag>
