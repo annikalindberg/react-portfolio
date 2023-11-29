@@ -44,11 +44,11 @@ const HeroSection = () => {
           </ProfileAndInfoWrapper>
           <PinkGradientWrapper>
           <OnLightText style={{ paddingBottom: '20px' }} >
-            I'm a results-driven Frontend Developer with a competitive mindset and a team-focused attitude. I currently built most my web applications in the MERN stack, in which Im fairly comfortable, but Im also seeking to evolve my DevOps skills containerizing with Docker and Kubernetes. </OnLightText>
-          <OnLightText style={{ paddingBottom: '20px' }} > Before transitioning to a career in frontend development, I spent over a decade working in the non-profit sector. The invaluable skills I acquired during that time include delivering high performance with limited resources, mastering effective communication techniques, and adapting my messaging to be accessible to diverse target audiences.
+          I'm a solution-driven, highly motivated Frontend Developer with a success focused mindset and a team-focused attitude. My deep-rooted passion for coding, combined with a never-ending appetite for learning, drives me to code each day and actively seek opportunities to secure my first developer position. </OnLightText>
+          <OnLightText style={{ paddingBottom: '20px' }} > Before transitioning career into the tech arena I worked with purpose driven non profits and startups within the field of DEIB (Diversity, Inclusion, Equity sand Belonging). I know how to make large impact with very limited resources, adapting quickly to various situations and how to work in a fast paced environment without compromising on quality.
           </OnLightText>
           <OnLightText >
-            In me, you'll find a dedicated and adaptive team player with a strong sense of responsibility, a deep-rooted passion for coding and a never ending appetite for learning. Im looking for a role that will nurture and evolve my skills and where I contribute with a positive attitude and a growth mindset.
+            In me, you'll find a dedicated and adaptive team player with a strong sense of responsibility, a deep-rooted passion for coding and a never ending appetite for learning. I carry a unique blend of skills and brings just the kinds of holistic talent that the tech industry needs. 
           </OnLightText> 
           </PinkGradientWrapper>
                     <ContactLinks />
