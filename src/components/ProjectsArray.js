@@ -1,4 +1,5 @@
 const projects = [
+
     {
         title: "teQueenMatch",
         description: "Our final project at Technigo, where I, together with Irupé Pozo Graviz, came up with an idea how to address a problem we experienced when trying to address the gaps of representation and diversity within the tech industry. Specifically, we saw a lack of digital platforms aimed at connecting women and non-binary individuals within the tech community, particularly those from underrepresented groups or those new to the field. To bridge this gap, we developed a platform that enables users to find and connect with others based on mutual interests, experiences, and preferences. Imagine a Tinder designed for global tech talent, facilitating connections for mentorship, support, and shared experiences.",
@@ -10,6 +11,16 @@ const projects = [
         notes: "Although our ambitions for teQueenMatch exceeded the three- week scope of the Technigo bootcamp, we chose to fully commit to the project during this period and to continue development afterward.This decision was driven partly by our affinity for challenges that push us beyond our limits.We're both dedicated to the learning process and were seeking an engaging project to work on post-bootcamp. However, the primary driver was our strong belief in the idea's merit and its potential value to the community.This commitment led us to invest heavily in the project, even if it meant facing developmental delays.I won't sugarcoat it; the journey was fraught with challenges, but we persevered because we truly believe the platform is essential—not just for us, but for anyone in a similar position. Notes about the project. Currently, our server is deployed on Render. While it serves our needs, we acknowledge that it might not be the most efficient option for our project's demands. We are actively exploring other hosting platforms to enhance server performance.",
         futureImprovements: "We're committed to improving TechConnect continuously. Here are some areas we're focusing on: Code Refactoring: We recognize the need for code refactoring and will continue to enhance code quality. User Experience: We plan to implement loaders in appropriate places to enhance the user experience. Middleware Handling: We're working to gracefully handle middleware and ensure smoother operation.",
     },
+    {
+        title: "DoulaSkapet landingpage",
+        description: "This is a landing page I built for my Doulateam DoulaSkapet. The page is built in React and uses React Router for navigation and MUI Material Design and useTheme. The design is made by me, and so is the logos and UX/UI. Im using React Helmet for SEO and Google Analytics for tracking. The page is hosted on Netlify using a custom domain.",
+        stack: ["React JS", "Styled Components", "JSX", "Node.js", "Material UI", "React Hooks", "React Router", "React Helmet", "Google Analytics", "SEO"],
+        image: "images/doulaskapet-projectimage.png",
+        imageCaption: "",
+        githubLink: "https://github.com/annikalindberg/DoulaSkapet",
+        LiveDemoLink: "https://doulaskapet.se/"
+    },
+    
     {
         title: "teQueenMatch API",
         description: "This is the backend API for teQueenMatch. We buildt it as part or our Final Project and uses React.js, Express.js, MongoDB, Node.js. The backend provides APIs for user registration, adding and updating preferences, login, user profile management, liking/disliking users, and matching. It also provides APIs for creating, updating, and deleting user profiles, and uses Cloudinary for user to upload and save profile-images. The API is currently deployed on Render, but initially we used Google Cloud Platform (which we are looking at moving back to soon do to performance optimization). For the database we use MongoDB Atlas, and mainly used Postman for testing the API. This was the first larger scale backend project we did and we learned a lot about how to structure the code and how to work with the different technologies. We also learned a lot about how to work with a database and how to structure the data. With this being said, we are aware that there is a lot of room for improvement, and we are currently working on refactoring the code and improving the performance. We are also looking to implement a CI/CD pipeline, socket.io for real-time chat-features.",

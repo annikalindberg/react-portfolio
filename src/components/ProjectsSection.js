@@ -33,7 +33,7 @@ const ProjectContent = () => {
         { value: 'Node.js', label: 'Node.js' },
         { value: 'Redux', label: 'Redux' },
         { value: 'Pair-programming', label: 'Pair-programming' },
-        { value: 'Backend', label: 'Backen' },
+        { value: 'Backend', label: 'Backend' },
     ];
 
     // state variable for accordion
