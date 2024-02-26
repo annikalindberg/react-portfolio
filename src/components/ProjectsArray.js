@@ -12,15 +12,15 @@ const projects = [
         futureImprovements: "We're committed to improving TechConnect continuously. Here are some areas we're focusing on: Code Refactoring: We recognize the need for code refactoring and will continue to enhance code quality. User Experience: We plan to implement loaders in appropriate places to enhance the user experience. Middleware Handling: We're working to gracefully handle middleware and ensure smoother operation.",
     },
     {
-        title: "DoulaSkapet landingpage",
-        description: "This is a landing page I built for my Doulateam DoulaSkapet. The page is built in React and uses React Router for navigation and MUI Material Design and useTheme. The design is made by me, and so is the logos and UX/UI. Im using React Helmet for SEO and Google Analytics for tracking. The page is hosted on Netlify using a custom domain.",
-        stack: ["React JS", "Styled Components", "JSX", "Node.js", "Material UI", "React Hooks", "React Router", "React Helmet", "Google Analytics", "SEO"],
+        title: "DoulaSkapet Company Web Page",
+        description: "Freelance job building a company web page for DoulaSkapet, a doulateam based in Stockholm, Sweden. This webpage is built bottom to top by me, including the designs, logos and content, domain-set up and SEO-optimization. I used Create React App as a starter and React Router for navigation. MUI Material is the library I used for component styling together with useTheme for customization. The design is made by me, and so is the logos and UX/UI. Im using React Helmet for SEO and Google Analytics for tracking and monitoring. I have been struggling quite a bit with utilizing GA to it's fullest using React Routing. Why I am currently looking into migrating to Next JS and utilize server side rendering and utilizing optimization benefits of SSR. The page is hosted on Netlify using a custom domain.",
+        stack: ["React JS", "Styled Components", "JSX", "Node.js", "Material UI", "React Hooks", "React Router", "React Helmet", "Google Analytics", "SEO", "Domain Management", ],
         image: "images/doulaskapet-projectimage.png",
         imageCaption: "",
         githubLink: "https://github.com/annikalindberg/DoulaSkapet",
         LiveDemoLink: "https://doulaskapet.se/"
     },
-    
+
     {
         title: "teQueenMatch API",
         description: "This is the backend API for teQueenMatch. We buildt it as part or our Final Project and uses React.js, Express.js, MongoDB, Node.js. The backend provides APIs for user registration, adding and updating preferences, login, user profile management, liking/disliking users, and matching. It also provides APIs for creating, updating, and deleting user profiles, and uses Cloudinary for user to upload and save profile-images. The API is currently deployed on Render, but initially we used Google Cloud Platform (which we are looking at moving back to soon do to performance optimization). For the database we use MongoDB Atlas, and mainly used Postman for testing the API. This was the first larger scale backend project we did and we learned a lot about how to structure the code and how to work with the different technologies. We also learned a lot about how to work with a database and how to structure the data. With this being said, we are aware that there is a lot of room for improvement, and we are currently working on refactoring the code and improving the performance. We are also looking to implement a CI/CD pipeline, socket.io for real-time chat-features.",
