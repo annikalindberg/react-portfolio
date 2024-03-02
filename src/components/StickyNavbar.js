@@ -22,7 +22,7 @@ const NavbarContainer = styled.nav`
   }
 `;
 
-const NavItems = styled.ul`
+const NavItems = styled.nav`
   display: ${props => (props.isMenuOpen ? 'flex' : 'none')};  // Display based on isMenuOpen for mobile
 background-color: #bef1efed;
 width: ${props => (props.isMenuOpen ? '50%' : '')}; // Display based on isMenuOpen for mobile  
@@ -43,7 +43,7 @@ align-items: flex-start;  // Aligns items to the left on the vertical axis
   }
 `;
 
-const NavItem = styled.li`
+const NavItem = styled.a`
   cursor: pointer;
   font-size: 1.2rem; 
   text-transform: capitalize;  // <- To make the text uppercase. To only capitalize the first letter, use capitalize instead 
@@ -51,22 +51,15 @@ const NavItem = styled.li`
   align-items: center;
   gap: 8px;  // <- Adds space between the icon and the text
   margin-bottom: 1rem;  // <- Adds space between the items
-  
- 
-
-  &:hover { 
-    text-decoration: underline;
+  text-decoration: none; // Remove underline from links by default
+  &:hover, &:focus {
+    text-decoration: underline; // Only show underline on hover/focus
   }
 
   &:focus {
-    outline: 2px solid ${colors.pastelPurple}; // <- Adds a purple outline on focus when using tab key. Only works on Chrome and Firefox though 
+    outline: 3px solid #805AD5; // Example color with sufficient contrast
   }
-  /*  @media screen and (max-width: 887px) {
-    flex-direction: column;
-    gap: 1rem;  // increase gap
-    } */
 `;
-
 
 const HamburgerIcon = styled.div`
 display: flex;
@@ -76,6 +69,9 @@ margin: 1rem;
 cursor: pointer;
 align-items: flex-start;
   z-index: 1001;  // To make sure it appears above the menu
+  &:focus {
+    outline: 3px solid black;
+  }
 
 div {
     width: 34px; 
@@ -100,27 +96,31 @@ display: none;
 `;
 
 const KeyboardAwareNavItem = ({ section, onClick, isActive, isMenuOpen }) => {
-    const handleKeyPress = (e) => {
-        if (e.key === 'Enter') {
-            onClick(section);
-        }
-    };
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      onClick(section);
+    }
+  };
+
+   
 
     return (
         <NavItem
-            onClick={() => onClick(section)}
-            onKeyPress={handleKeyPress}
-            tabIndex="0"
-            aria-expanded={isActive ? 'true' : 'false'}
-            style={{ color: isActive ? colors.pastelPurple : '' }}
+  as="a"
+      onClick={() => onClick(section)}
+      onKeyPress={handleKeyPress}
+      tabIndex="0"
+      aria-expanded={isActive ? 'true' : 'false'}
+      style={{ color: isActive ? colors.pastelPurple : '' }}
+      aria-label={section} // Provide an accessible label for the screen readers since the text is hidden
         >
-            {section === 'home' && <FaHome style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
-            {section === 'tech-stack' && <FaCode style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
-            {section === 'projects' && <FaProjectDiagram style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
-            {section === 'my-words' && <FaComment style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
-            {section === 'skills' && <FaLaptopCode style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
-            {section === 'time-to-talk' && <FaHeadset style={{ marginLeft: isMenuOpen ? '10px' : '0' }} />}
-            {section}
+      {section === 'home' && <FaHome aria-hidden="true" />}
+      {section === 'tech-stack' && <FaCode aria-hidden="true" />}
+      {section === 'projects' && <FaProjectDiagram aria-hidden="true" />}
+      {section === 'my-words' && <FaComment aria-hidden="true" />}
+      {section === 'skills' && <FaLaptopCode aria-hidden="true" />}
+      {section === 'time-to-talk' && <FaHeadset aria-hidden="true" />}
+      <span className="visually-hidden">{section}</span>
         </NavItem>
     );
 };
